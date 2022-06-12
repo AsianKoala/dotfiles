@@ -238,7 +238,7 @@ bindsym $mod+l exec betterlockscreen -l dimblur --display 1 --span
 
 
 # i3 gaps config
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 0
 
 gaps inner 50
 gaps outer 5
@@ -257,7 +257,7 @@ hide_edge_borders smart_no_gaps
 exec_always ~/.screenlayout/triple_fixed.sh
 
 # Background
-exec_always feh --bg-fill ~/pictures/wallpaper.png
+exec_always feh --bg-fill ~/pictures/wallpapers/wallpaper.png
 
 # Picom 
 exec_always picom --experimental-backend
@@ -268,9 +268,6 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh --docky
 # Assign default workspaces
 assign [class="discord"] $ws2
 for_window [class="spotify"] move to workspace $ws4
-for_window [class="firefox"] move to workspace $ws1
-assign [class="spotify"] $ws4
-assign [class="pavucontrol"] $ws4
 
 # System startup
 # Redshift
@@ -282,7 +279,6 @@ exec --no-startup-id ~/scripts/connect_pxc.sh
 # Startup apps
 exec --no-startup-id discord
 exec --no-startup-id firefox
-exec --no-startup-id spotify
-exec --no-startup-id pavucontrol
-
+#exec --no-startup-id spotify
+#exec --no-startup-id pavucontrol
 

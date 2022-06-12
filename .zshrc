@@ -109,12 +109,14 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 
-
-
 # User stuff here
 alias ranger="ranger && cat /home/neil/.cache/wal/sequences"
-alias ls='colorls -l'
+#alias ls='colorls -l'
 alias la='ls -a'
+alias ll='ls -l'
+alias lla='ls -la'
+alias py='python3'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 (cat ~/.cache/wal/sequences &)
 
