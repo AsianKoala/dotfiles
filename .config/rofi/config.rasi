@@ -7,16 +7,17 @@ configuration {
   show-icons: true;
 }
 
-@theme "/dev/null"
+//@theme "/dev/null"
+@import "~/.cache/wal/colors-rofi-dark"
 
 * {
-  bg: #11121D;
-  bg-alt: #444b6a;
+  bg: inherit;
+  bg-alt: inherit;
 
-  fg: #FFFFFF;
-  fg-alt: #787c99;
+  fg: inherit;
+  fg-alt: inherit;
 
-  background-color: @bg;
+  background-color: inherit;
   
   border: 0;
   margin: 0;
@@ -26,15 +27,16 @@ configuration {
 
 window {
   width: 30%;
+  border-radius: 30px;
 }
 
 element {
-  padding: 8 0;
-  text-color: @fg-alt;
+  padding: 8 8;
+  text-color: inherit;
 }
 
 element selected {
-  text-color: @fg;
+  text-color: inherit;
 }
 
 element-text {
@@ -48,9 +50,9 @@ element-icon {
 }
 
 entry {
-  background-color: @bg-alt;
+  background-color: inherit;
   padding: 12;
-  text-color: @fg;
+  text-color: inherit;
 }
 
 inputbar {
@@ -59,21 +61,21 @@ inputbar {
 
 listview {
   padding: 8 12;
-  background-color: @bg;
+  background-color: inherit;
   columns: 1;
   lines: 8;
 }
 
 mainbox {
-  background-color: @bg;
+  background-color: inherit;
   children: [inputbar, listview];
 }
 
 prompt {
-  background-color: @bg-alt;
+  background-color: inherit;
   enabled: true;
   padding: 12 0 0 12;
-  text-color: @fg;
+  text-color: inherit;
 }
 
 /* vim: ft=sass

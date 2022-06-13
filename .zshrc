@@ -117,6 +117,7 @@ alias ll='ls -l'
 alias lla='ls -la'
 alias py='python3'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias bonsai='cbonsai --live -m "こんばんわ ニール！"'
 
 (cat ~/.cache/wal/sequences &)
 

@@ -157,8 +157,6 @@ set cmdheight=2
 
 set number
 
-set nowrap
-
 set nostartofline
 
 " search options
