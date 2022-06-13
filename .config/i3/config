@@ -110,17 +110,17 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1< web >"
-set $ws2 "2< discord >"
-set $ws3 "3< kitty >"
-set $ws4 "4< audio >"
-set $ws5 "5< web2 >"
+set $ws1 "1<web>"
+set $ws2 "2<discord>"
+set $ws3 "3<kitty>"
+set $ws4 "4<audio>"
+set $ws5 "5" 
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
-set $ws11 "11< hentai >"
+set $ws11 "11"
 
 ## switch to workspace
 #bindsym $mod+1 workspace number $ws1
@@ -234,6 +234,12 @@ bindsym $mod+r mode "resize"
 
 # Custom stuff starts here
 
+# monitor bindings
+#workspace $ws1 output DP-4
+#workspace $ws2 output HDMI-0
+#workspace $ws3 output DP-2
+#workspace $ws4 output DP-4
+
 #PYWAL ENABLED THEME
 set_from_resource $fg i3wm.color7 #f0f0f0
 set_from_resource $bg i3wm.color2 #f0f0f0
@@ -271,17 +277,18 @@ hide_edge_borders smart_no_gaps
 exec_always ~/.screenlayout/triple_fixed.sh
 
 # Background
-#exec_always feh --bg-fill ~/pictures/wallpapers/wallpaper.png
+exec_always feh --bg-fill /home/neil/wallpapers/aenami.png
 
 # Picom 
-exec_always picom --experimental-backend
+exec_always --no-startup-id picom --experimental-backend
 
 # Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh --docky
 
 # Assign default workspaces
 assign [class="discord"] $ws2
-for_window [class="spotify"] move to workspace $ws4
+for_window [class="Spotify"] move to workspace $ws4
+for_window [class="Pavucontrol"] move workspace $ws4
 
 # System startup
 # Redshift
@@ -293,6 +300,6 @@ exec --no-startup-id ~/scripts/connect_pxc.sh
 # Startup apps
 exec --no-startup-id discord
 exec --no-startup-id firefox
-#exec --no-startup-id spotify
-#exec --no-startup-id pavucontrol
+exec --no-startup-id spotify
+exec --no-startup-id pavucontrol
 

@@ -110,6 +110,11 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 
 # User stuff here
+
+
+xset r rate 250 60
+
+
 alias ranger="ranger && cat /home/neil/.cache/wal/sequences"
 #alias ls='colorls -l'
 alias la='ls -a'
@@ -118,6 +123,9 @@ alias lla='ls -la'
 alias py='python3'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias bonsai='cbonsai --live -m "こんばんわ ニール！"'
+
+alias picomconfig='vim ~/.config/picom.conf'
+alias i3conf='vim ~/.config/i3/config'
 
 (cat ~/.cache/wal/sequences &)
 

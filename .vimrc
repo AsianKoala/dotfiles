@@ -170,3 +170,13 @@ set shiftwidth=4
 set expandtab
 set tabstop=4
 
+call plug#begin('~/.vim/plugged')
+
+Plug 'dylanaraps/wal.vim'
+
+Plug 'https://github.com/udalov/kotlin-vim'
+
+call plug#end()
+
+colorscheme wal
+
