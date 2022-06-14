@@ -235,7 +235,14 @@ bindsym $mod+r mode "resize"
 # Custom stuff starts here
 
 # monitor bindings
-#workspace $ws1 output DP-4
+set $middlemonitor "DP-4"
+set $leftmonitor "HDMI-0"
+set $rightmonitor "DP-2"
+
+workspace $ws1 output $middlemonitor
+workspace $ws2 output $leftmonitor
+workspace $ws3 output $rightmonitor
+workspace $ws4 output $middlemonitor
 #workspace $ws2 output HDMI-0
 #workspace $ws3 output DP-2
 #workspace $ws4 output DP-4
@@ -277,7 +284,7 @@ hide_edge_borders smart_no_gaps
 exec_always ~/.screenlayout/triple_fixed.sh
 
 # Background
-exec_always feh --bg-fill /home/neil/wallpapers/aenami.png
+exec_always feh --bg-fill /home/neil/pictures/wallpapers/aenami.png
 
 # Picom 
 exec_always --no-startup-id picom --experimental-backend
