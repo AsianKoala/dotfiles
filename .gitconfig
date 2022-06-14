@@ -1,3 +1,5 @@
 [user]
 	email = neilmehra@outlook.com
 	name = neil mehra
+[core]
+	editor = vim

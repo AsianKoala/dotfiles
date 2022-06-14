@@ -116,10 +116,10 @@ xset r rate 250 60
 
 
 alias ranger="ranger && cat /home/neil/.cache/wal/sequences"
-#alias ls='colorls -l'
+alias ls='exa --oneline --icons'
 alias la='ls -a'
-alias ll='ls -l'
-alias lla='ls -la'
+alias ld='ls -D'
+alias lt='exa -T --icons'
 alias py='python3'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias bonsai='cbonsai --live -m "こんばんわ ニール！"'
