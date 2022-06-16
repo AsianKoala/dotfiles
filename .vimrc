@@ -170,6 +170,11 @@ set shiftwidth=4
 set expandtab
 set tabstop=4
 
+set clipboard=unnamedplus
+
+set modelines=0
+set nomodeline
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'dylanaraps/wal.vim'

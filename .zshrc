@@ -86,6 +86,7 @@ plugins=(
 	copyfile
 	copybuffer
 	dirhistory
+    sudo
 )
 
 source $ZSH/oh-my-zsh.sh

@@ -59,10 +59,10 @@ bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-#bindsym $mod+j focus left
-#bindsym $mod+k focus down
-#bindsym $mod+l focus up
-#bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -71,10 +71,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -83,7 +83,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+b split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -110,10 +110,10 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1<web>"
-set $ws2 "2<discord>"
-set $ws3 "3<kitty>"
-set $ws4 "4<audio>"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
 set $ws5 "5" 
 set $ws6 "6"
 set $ws7 "7"
@@ -148,32 +148,32 @@ set $ws11 "11"
 
 
 # switch to workspace
-bindsym F1 workspace number $ws1
-bindsym F2 workspace number $ws2
-bindsym F3 workspace number $ws3
-bindsym F4 workspace number $ws4
-bindsym F5 workspace number $ws5
-bindsym F6 workspace number $ws6
-bindsym F7 workspace number $ws7
-bindsym F8 workspace number $ws8
-bindsym F9 workspace number $ws9
-bindsym F10 workspace number $ws10
-bindsym F11 workspace number $ws11
-bindsym F12 workspace number $ws2; workspace number $ws3; workspace number $ws1;
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+10 workspace number $ws10
+bindsym $mod+11 workspace number $ws11
+bindsym $mod+12 workspace number $ws12
 
 # move focused container to workspace
-bindsym Shift+F1 move container to workspace number $ws1
-bindsym Shift+F2 move container to workspace number $ws2
-bindsym Shift+F3 move container to workspace number $ws3
-bindsym Shift+F4 move container to workspace number $ws4
-bindsym Shift+F5 move container to workspace number $ws5
-bindsym Shift+F6 move container to workspace number $ws6
-bindsym Shift+F7 move container to workspace number $ws7
-bindsym Shift+F8 move container to workspace number $ws8
-bindsym Shift+F9 move container to workspace number $ws9
-bindsym Shift+F10 move container to workspace number $ws10
-bindsym Shift+F11 move container to workspace number $ws11
-
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+10 move container to workspace number $ws10
+bindsym $mod+Shift+11 move container to workspace number $ws11
+bindsym $mod+Shift+12 move container to workspace number $ws12
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -182,54 +182,59 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+bindsym $mod+y resize shrink width 5 px or 5 ppt
+bindsym $mod+u resize grow height 5 px or 5 ppt
+bindsym $mod+i resize shrink height 5 px or 5 ppt
+bindsym $mod+p resize grow width 5 px or 5 ppt
+
 # resize window (you can also use the mouse for that)
-mode "resize" {
-
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        #bindsym j resize shrink width 10 px or 10 ppt
-        #bindsym k resize grow height 10 px or 10 ppt
-        #bindsym l resize shrink height 10 px or 10 ppt
-        #bindsym semicolon resize grow width 10 px or 10 ppt
-
-        ## same bindings, but for the arrow keys
-        #bindsym Left resize shrink width 10 px or 10 ppt
-        #bindsym Down resize grow height 10 px or 10 ppt
-        #bindsym Up resize shrink height 10 px or 10 ppt
-        #bindsym Right resize grow width 10 px or 10 ppt
-
-        ## back to normal: Enter or Escape or $mod+r
-        #bindsym Return mode "default"
-        #bindsym Escape mode "default"
-        #bindsym $mod+r mode "default"
-}
-
-bindsym $mod+r mode "resize"
+#mode "resize" {
+#
+#        # These bindings trigger as soon as you enter the resize mode
+#
+#        # Pressing left will shrink the window’s width.
+#        # Pressing right will grow the window’s width.
+#        # Pressing up will shrink the window’s height.
+#        # Pressing down will grow the window’s height.
+#        bindsym h resize shrink width 5 px or 5 ppt
+#        bindsym j resize grow height 5 px or 5 ppt
+#        bindsym k resize shrink height 5 px or 5 ppt
+#        bindsym l resize grow width 5 px or 5 ppt
+#
+#        # same bindings, but for the arrow keys
+#        bindsym Left resize shrink width 5 px or 5 ppt
+#        bindsym Down resize grow height 5 px or 5 ppt
+#        bindsym Up resize shrink height 5 px or 5 ppt
+#        bindsym Right resize grow width 5 px or 5 ppt
+#
+#        # back to normal: Enter or Escape
+#        bindsym Return mode "default"
+#        bindsym Escape mode "default"
+#
+#        # These bindings trigger as soon as you enter the resize mode
+#
+#        # Pressing left will shrink the window’s width.
+#        # Pressing right will grow the window’s width.
+#        # Pressing up will shrink the window’s height.
+#        # Pressing down will grow the window’s height.
+#        #bindsym j resize shrink width 10 px or 10 ppt
+#        #bindsym k resize grow height 10 px or 10 ppt
+#        #bindsym l resize shrink height 10 px or 10 ppt
+#        #bindsym semicolon resize grow width 10 px or 10 ppt
+#
+#        ## same bindings, but for the arrow keys
+#        #bindsym Left resize shrink width 10 px or 10 ppt
+#        #bindsym Down resize grow height 10 px or 10 ppt
+#        #bindsym Up resize shrink height 10 px or 10 ppt
+#        #bindsym Right resize grow width 10 px or 10 ppt
+#
+#        ## back to normal: Enter or Escape or $mod+r
+#        #bindsym Return mode "default"
+#        #bindsym Escape mode "default"
+#        #bindsym $mod+r mode "default"
+#}
+#
+#bindsym $mod+r mode "resize"
 
 
 # Custom stuff starts here
@@ -243,9 +248,7 @@ workspace $ws1 output $middlemonitor
 workspace $ws2 output $leftmonitor
 workspace $ws3 output $rightmonitor
 workspace $ws4 output $middlemonitor
-#workspace $ws2 output HDMI-0
-#workspace $ws3 output DP-2
-#workspace $ws4 output DP-4
+workspace $ws5 output $leftmonitor
 
 #PYWAL ENABLED THEME
 set_from_resource $fg i3wm.color7 #f0f0f0
@@ -261,7 +264,7 @@ client.background       $bg
 # User bindings
 # Flameshot snipping tool
 bindsym $mod+Shift+s  exec flameshot gui
-bindsym $mod+l exec betterlockscreen -l dimblur --display 1 --span
+bindsym $mod+Escape  exec betterlockscreen -l dimblur --span
 
 
 # i3 gaps config
@@ -293,20 +296,26 @@ exec_always --no-startup-id picom --experimental-backend
 exec_always --no-startup-id ~/.config/polybar/launch.sh --docky
 
 # Assign default workspaces
-assign [class="discord"] $ws2
+assign [class="discord"] $ws5
 for_window [class="Spotify"] move to workspace $ws4
 for_window [class="Pavucontrol"] move workspace $ws4
 
+
 # System startup
 # Redshift
+#exec_always --no-startup-id killall redshift
 exec --no-startup-id redshift
 
 # PXC Bluetooth connection
 exec --no-startup-id ~/scripts/connect_pxc.sh
 
 # Startup apps
+exec --no-startup-id i3-msg 'workspace 1; exec firefox'
+exec --no-startup-id i3-msg 'workspace 2; exec kitty --hold sh -c "ranger"'
+exec --no-startup-id i3-msg 'workspace 2; exec kitty'
+exec --no-startup-id i3-msg 'workspace 3; exec kitty --hold sh -c "gotop"'
+exec --no-startup-id i3-msg 'workspace 3; exec kitty --hold sh -c "vis"'
 exec --no-startup-id discord
-exec --no-startup-id firefox
-exec --no-startup-id spotify
+exec --no-startup-id LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
 exec --no-startup-id pavucontrol
 
