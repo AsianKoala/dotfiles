@@ -112,7 +112,10 @@ source $ZSH/oh-my-zsh.sh
 
 # User stuff here
 
+# fix cursor
+#echo '\e[5 q'
 
+# set keyboard rate
 xset r rate 250 60
 
 
@@ -124,8 +127,8 @@ alias lt='exa -T --icons'
 alias py='python3'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias bonsai='cbonsai --live -m "こんばんわ ニール！"'
+alias matrix='unimatrix -s 96 -l k'
 
-alias picomconfig='vim ~/.config/picom.conf'
 alias i3conf='vim ~/.config/i3/config'
 
 (cat ~/.cache/wal/sequences &)
@@ -140,6 +143,7 @@ export RANGER_LOAD_DEFAULT_RC=false
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 export PATH="$PATH:$GEM_HOME/bin"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+export EDITOR=/usr/bin/vim
 
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
