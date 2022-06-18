@@ -159,7 +159,7 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+10 workspace number $ws10
 bindsym $mod+11 workspace number $ws11
-bindsym $mod+12 workspace number $ws12
+#bindsym $mod+12 workspace number $ws12
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -173,7 +173,7 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+10 move container to workspace number $ws10
 bindsym $mod+Shift+11 move container to workspace number $ws11
-bindsym $mod+Shift+12 move container to workspace number $ws12
+#bindsym $mod+Shift+12 move container to workspace number $ws12
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -182,10 +182,10 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym $mod+y resize shrink width 5 px or 5 ppt
+bindsym $mod+o resize shrink width 5 px or 5 ppt
 bindsym $mod+i resize grow height 5 px or 5 ppt
 bindsym $mod+u resize shrink height 5 px or 5 ppt
-bindsym $mod+o resize grow width 5 px or 5 ppt
+bindsym $mod+y resize grow width 5 px or 5 ppt
 
 # resize window (you can also use the mouse for that)
 #mode "resize" {
@@ -239,34 +239,6 @@ bindsym $mod+o resize grow width 5 px or 5 ppt
 
 # Custom stuff starts here
 
-# monitor bindings
-set $middlemonitor "DP-4"
-set $leftmonitor "HDMI-0"
-set $rightmonitor "DP-2"
-
-workspace $ws1 output $middlemonitor
-workspace $ws2 output $leftmonitor
-workspace $ws3 output $rightmonitor
-workspace $ws4 output $middlemonitor
-workspace $ws5 output $leftmonitor
-
-#PYWAL ENABLED THEME
-set_from_resource $fg i3wm.color7 #f0f0f0
-set_from_resource $bg i3wm.color2 #f0f0f0
-# class                 border  backgr. text indicator child_border
-client.focused          $bg     $bg     $fg  $bg       $bg
-client.focused_inactive $bg     $bg     $fg  $bg       $bg
-client.unfocused        $bg     $bg     $fg  $bg       $bg
-client.urgent           $bg     $bg     $fg  $bg       $bg
-client.placeholder      $bg     $bg     $fg  $bg       $bg
-client.background       $bg
-
-# User bindings
-# Flameshot snipping tool
-bindsym $mod+Shift+s  exec flameshot gui
-bindsym $mod+Escape  exec betterlockscreen -l dimblur --span
-
-
 # i3 gaps config
 for_window [class=".*"] border pixel 0
 
@@ -281,33 +253,66 @@ smart_borders on
 hide_edge_borders smart_no_gaps
 
 
+#PYWAL ENABLED THEME
+set_from_resource $fg i3wm.color7 #f0f0f0
+set_from_resource $bg i3wm.color2 #f0f0f0
+# class                 border  backgr. text indicator child_border
+client.focused          $bg     $bg     $fg  $bg       $bg
+client.focused_inactive $bg     $bg     $fg  $bg       $bg
+client.unfocused        $bg     $bg     $fg  $bg       $bg
+client.urgent           $bg     $bg     $fg  $bg       $bg
+client.placeholder      $bg     $bg     $fg  $bg       $bg
+client.background       $bg
 
-# System configuration
-# Monitor
-exec_always ~/.screenlayout/triple_fixed.sh
+# monitor bindings
+set $middlemonitor "DP-4"
+set $leftmonitor "HDMI-0"
+set $rightmonitor "DP-2"
 
-# Background
-exec_always feh --bg-fill /home/neil/pictures/wallpapers/aenami.png
+workspace $ws1 output $middlemonitor
+workspace $ws2 output $leftmonitor
+workspace $ws3 output $rightmonitor
+workspace $ws4 output $rightmonitor
+workspace $ws5 output $leftmonitor
+workspace $ws6 output $middlemonitor
 
-# Picom 
-exec_always --no-startup-id picom --experimental-backend
 
-# Polybar
-exec_always --no-startup-id ~/.config/polybar/launch.sh --docky
+# User bindings
+# Flameshot snipping tool
+bindsym $mod+Shift+s  exec flameshot gui
+bindsym $mod+Escape  exec betterlockscreen -l dimblur --span
+bindsym $mod+F12 exec i3-msg ';workspace number 2; workspace number 3; workspace number 1'
 
-# Assign default workspaces
+
+# Window rules
 assign [class="discord"] $ws5
 for_window [class="Spotify"] move to workspace $ws4
 for_window [class="Pavucontrol"] move workspace $ws4
 
 
+# System config
+# Monitor
+exec_always --no-startup-id ~/.screenlayout/triple_fixed.sh
+
+# Background
+exec_always --no-startup-id feh --no-fehbg --bg-fill /home/neil/pictures/wallpapers/aenami.png
+
+# Picom 
+exec_always --no-startup-id picom --experimental-backend
+
+# Polybar
+exec_always --no-startup-id ~/.config/polybar/docky/launch.sh
+
+
 # System startup
 # Redshift
-#exec_always --no-startup-id killall redshift
 exec --no-startup-id redshift
 
 # PXC Bluetooth connection
 exec --no-startup-id ~/scripts/connect_pxc.sh
+
+# MPD
+exec --no-startup-id mpd
 
 # Startup apps
 exec --no-startup-id i3-msg 'workspace 1; exec firefox'
@@ -315,7 +320,8 @@ exec --no-startup-id i3-msg 'workspace 2; exec kitty --hold sh -c "ranger"'
 exec --no-startup-id i3-msg 'workspace 2; exec kitty'
 exec --no-startup-id i3-msg 'workspace 3; exec kitty --hold sh -c "gotop"'
 exec --no-startup-id i3-msg 'workspace 3; exec kitty --hold sh -c "vis"'
-exec --no-startup-id discord
+exec --no-startup-id i3-msg 'workspace 4; exec kitty'
+exec --no-startup-id 'sleep 10; discord'
 exec --no-startup-id LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
 exec --no-startup-id pavucontrol
 
