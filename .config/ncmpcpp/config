@@ -10,3 +10,7 @@ visualizer_output_name = "my_fifo"
 visualizer_in_stereo = "yes"
 visualizer_type = "spectrum"
 visualizer_look = "+|"
+user_interface = "alternative"
+alternative_header_first_line_format = "$(11) █▓▒░ $b$(13)%a$(end)$/b ░▒▓█$(end)"
+alternative_header_second_line_format = "$(4)%t (%y)$(end)"
+alternative_ui_separator_color = 11

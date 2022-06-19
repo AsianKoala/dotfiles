@@ -144,7 +144,7 @@ export RANGER_LOAD_DEFAULT_RC=false
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 export PATH="$PATH:$GEM_HOME/bin"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-export EDITOR=/usr/bin/vim
+export EDITOR=/usr/bin/nvim
 
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

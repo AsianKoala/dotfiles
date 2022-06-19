@@ -315,13 +315,13 @@ exec --no-startup-id ~/scripts/connect_pxc.sh
 exec --no-startup-id mpd
 
 # Startup apps
-exec --no-startup-id i3-msg 'workspace 1; exec firefox'
-exec --no-startup-id i3-msg 'workspace 2; exec kitty --hold sh -c "ranger"'
-exec --no-startup-id i3-msg 'workspace 2; exec kitty'
-exec --no-startup-id i3-msg 'workspace 3; exec kitty --hold sh -c "gotop"'
-exec --no-startup-id i3-msg 'workspace 3; exec kitty --hold sh -c "vis"'
-exec --no-startup-id i3-msg 'workspace 4; exec kitty'
-exec --no-startup-id 'sleep 10; discord'
-exec --no-startup-id LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
-exec --no-startup-id pavucontrol
+#exec --no-startup-id i3-msg 'workspace 1; exec firefox'
+#exec --no-startup-id i3-msg 'workspace 2; exec kitty --hold sh -c "ranger"'
+#exec --no-startup-id i3-msg 'workspace 2; exec kitty'
+#exec --no-startup-id i3-msg 'workspace 3; exec kitty --hold sh -c "gotop"'
+#exec --no-startup-id i3-msg 'workspace 3; exec kitty --hold sh -c "vis"'
+#exec --no-startup-id i3-msg 'workspace 4; exec kitty --hold sh -c "ncmpcpp"'
+#exec --no-startup-id 'sleep 10; discord'
+#exec --no-startup-id LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
+#exec --no-startup-id pavucontrol
 
