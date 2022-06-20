@@ -182,10 +182,10 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym $mod+o resize shrink width 5 px or 5 ppt
-bindsym $mod+i resize grow height 5 px or 5 ppt
-bindsym $mod+u resize shrink height 5 px or 5 ppt
-bindsym $mod+y resize grow width 5 px or 5 ppt
+bindsym $mod+u resize shrink width 5 px or 5 ppt
+bindsym $mod+o resize grow height 5 px or 5 ppt
+bindsym $mod+i resize shrink height 5 px or 5 ppt
+bindsym $mod+p resize grow width 5 px or 5 ppt
 
 # resize window (you can also use the mouse for that)
 #mode "resize" {
@@ -240,24 +240,24 @@ bindsym $mod+y resize grow width 5 px or 5 ppt
 # Custom stuff starts here
 
 # i3 gaps config
-for_window [class=".*"] border pixel 0
+for_window [class=".*"] border pixel 1
 
 gaps inner 50
 gaps outer 5
 
 # Activate smart borders (always)
-smart_borders on
+#smart_borders on
 
 # Activate smart borders (only when there are effectively no gaps)
 #smart_borders no_gaps
-hide_edge_borders smart_no_gaps
+#hide_edge_borders smart_no_gaps
 
 
 #PYWAL ENABLED THEME
-set_from_resource $fg i3wm.color7 #f0f0f0
-set_from_resource $bg i3wm.color2 #f0f0f0
+set_from_resource $fg i3wm.color1 #ff0000
+set_from_resource $bg i3wm.color2 #ff0000
 # class                 border  backgr. text indicator child_border
-client.focused          $bg     $bg     $fg  $bg       $bg
+client.focused          $fg     $bg     $fg  $bg       $fg
 client.focused_inactive $bg     $bg     $fg  $bg       $bg
 client.unfocused        $bg     $bg     $fg  $bg       $bg
 client.urgent           $bg     $bg     $fg  $bg       $bg
@@ -295,7 +295,8 @@ for_window [class="Pavucontrol"] move workspace $ws4
 exec_always --no-startup-id ~/.screenlayout/triple_fixed.sh
 
 # Background
-exec_always --no-startup-id feh --no-fehbg --bg-fill /home/neil/pictures/wallpapers/aenami.png
+#exec_always --no-startup-id feh --no-fehbg --bg-fill /home/neil/pictures/wallpapers/aenami.png
+exec_always ~/.fehbg
 
 # Picom 
 exec_always --no-startup-id picom --experimental-backend

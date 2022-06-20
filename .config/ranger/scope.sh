@@ -153,6 +153,10 @@ handle_image() {
             ## as above), but might fail for unsupported types.
             exit 7;;
 
+        # Audio # 
+        audio/*) 
+        # Get embedded thumbnail # 
+            ffmpeg -i "${FILE_PATH}" -map 0:v -map -0:V -c copy  "${IMAGE_CACHE_PATH}" && exit 6;; 
         # Video
          video/*)
              # Thumbnail
