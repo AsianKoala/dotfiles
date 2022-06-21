@@ -120,7 +120,7 @@ xset r rate 250 60
 
 
 alias ranger="ranger && cat /home/neil/.cache/wal/sequences"
-alias ls='exa --oneline --icons'
+alias ls='exa --icons'
 alias la='ls -a'
 alias ld='ls -D'
 alias lt='exa -T --icons'
@@ -131,6 +131,7 @@ alias matrix='unimatrix -s 96 -l k'
 alias i3conf='vim ~/.config/i3/config'
 alias sp='~/scripts/sp.sh'
 alias ytaudio="yt-dlp -f 'ba' -x"
+alias vim='nvim'
 
 (cat ~/.cache/wal/sequences &)
 
@@ -144,7 +145,7 @@ export RANGER_LOAD_DEFAULT_RC=false
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 export PATH="$PATH:$GEM_HOME/bin"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-export EDITOR=/usr/bin/vim
+export EDITOR=/usr/bin/nvim
 export PATH=$PATH:/opt/gradle/gradle-7.4.2/bin
 
 

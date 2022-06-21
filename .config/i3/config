@@ -304,6 +304,9 @@ exec_always --no-startup-id picom --experimental-backend
 # Polybar
 exec_always --no-startup-id ~/.config/polybar/docky/launch.sh
 
+# Remap keys
+exec_always --no-startup-id xmodmap ~/.Xmodmap
+
 
 # System startup
 # Redshift
