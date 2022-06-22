@@ -131,7 +131,6 @@ alias matrix='unimatrix -s 96 -l k'
 alias i3conf='vim ~/.config/i3/config'
 alias sp='~/scripts/sp.sh'
 alias ytaudio="yt-dlp -f 'ba' -x"
-alias vim='nvim'
 
 (cat ~/.cache/wal/sequences &)
 
