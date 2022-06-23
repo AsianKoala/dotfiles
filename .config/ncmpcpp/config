@@ -13,4 +13,39 @@ visualizer_look = "+|"
 user_interface = "alternative"
 alternative_header_first_line_format = "$(11) █▓▒░ $b$(13)%a$(end)$/b ░▒▓█$(end)"
 alternative_header_second_line_format = "$(4)%t (%y)$(end)"
-alternative_ui_separator_color = 11
+#alternative_ui_separator_color = 6
+colors_enabled = yes
+main_window_color = 6
+
+empty_tag_color = cyan
+
+header_window_color = default
+
+volume_color = default
+
+state_line_color = default
+
+state_flags_color = default:b
+
+#main_window_color = 6
+
+color1 = white
+
+color2 = 6 
+
+progressbar_color = black:b
+
+progressbar_elapsed_color = blue
+
+statusbar_color = 6
+
+statusbar_time_color = 6
+
+player_state_color = 6
+
+alternative_ui_separator_color = black:b
+
+window_border_color = magenta
+
+active_window_border = 6
+

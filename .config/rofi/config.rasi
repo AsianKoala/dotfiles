@@ -8,7 +8,8 @@ configuration {
 }
 
 //@theme "/dev/null"
-@import "~/.cache/wal/colors-rofi-dark"
+//@import "~/.cache/wal/colors-rofi-dark"
+@import "./theme.rasi"
 
 * {
   bg: inherit;
@@ -26,7 +27,7 @@ configuration {
 }
 
 window {
-  width: 30%;
+  width: 25%;
   border-radius: 30px;
 }
 

@@ -119,7 +119,7 @@ source $ZSH/oh-my-zsh.sh
 xset r rate 250 60
 
 
-alias ranger="ranger && cat /home/neil/.cache/wal/sequences"
+#alias ranger="ranger && cat /home/neil/.cache/wal/sequences"
 alias ls='exa --icons'
 alias la='ls -a'
 alias ld='ls -D'
@@ -132,13 +132,13 @@ alias i3conf='vim ~/.config/i3/config'
 alias sp='~/scripts/sp.sh'
 alias ytaudio="yt-dlp -f 'ba' -x"
 
-(cat ~/.cache/wal/sequences &)
-
-# Alternative (blocks terminal for 0-3ms)
-cat ~/.cache/wal/sequences
-
-# To add support for TTYs this line can be optionally added.
-source ~/.cache/wal/colors-tty.sh
+#(cat ~/.cache/wal/sequences &)
+#
+## Alternative (blocks terminal for 0-3ms)
+#cat ~/.cache/wal/sequences
+#
+## To add support for TTYs this line can be optionally added.
+#source ~/.cache/wal/colors-tty.sh
 
 export RANGER_LOAD_DEFAULT_RC=false
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"

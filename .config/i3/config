@@ -240,7 +240,7 @@ bindsym $mod+p resize grow width 5 px or 5 ppt
 # Custom stuff starts here
 
 # i3 gaps config
-for_window [class=".*"] border pixel 1
+for_window [class=".*"] border pixel 2
 
 gaps inner 50
 gaps outer 5
@@ -254,16 +254,18 @@ gaps outer 5
 
 
 #PYWAL ENABLED THEME
-set_from_resource $fg i3wm.color1 #ff0000
-set_from_resource $bg i3wm.color2 #ff0000
-# class                 border  backgr. text indicator child_border
-client.focused          $fg     $bg     $fg  $bg       $fg
-client.focused_inactive $bg     $bg     $fg  $bg       $bg
-client.unfocused        $bg     $bg     $fg  $bg       $bg
-client.urgent           $bg     $bg     $fg  $bg       $bg
-client.placeholder      $bg     $bg     $fg  $bg       $bg
-client.background       $bg
-
+# set_from_resource $fg i3wm.color1 #ff0000
+# set_from_resource $bg i3wm.color2 #ff0000
+# # class                 border  backgr. text indicator child_border
+# client.focused          $fg     $bg     $fg  $bg       $fg
+# client.focused_inactive $bg     $bg     $fg  $bg       $bg
+# client.unfocused        $bg     $bg     $fg  $bg       $bg
+# client.urgent           $bg     $bg     $fg  $bg       $bg
+# client.placeholder      $bg     $bg     $fg  $bg       $bg
+# client.background       $bg
+client.focused           #9aa5ce #364A82 #c0caf5 #9aa5ce   #9aa5ce
+client.focused_inactive  #16161d #16161d #c0caf5 #16161d   #16161d
+client.unfocused         #16161d #16161d #c0caf5 #16161d   #16161d
 # monitor bindings
 set $middlemonitor "DP-4"
 set $leftmonitor "HDMI-0"
@@ -296,7 +298,7 @@ exec_always --no-startup-id ~/.screenlayout/triple_fixed.sh
 
 # Background
 #exec_always --no-startup-id feh --no-fehbg --bg-fill /home/neil/pictures/wallpapers/aenami.png
-exec_always ~/.fehbg
+exec_always ~/scripts/setbg.sh
 
 # Picom 
 exec_always --no-startup-id picom --experimental-backend
@@ -304,8 +306,7 @@ exec_always --no-startup-id picom --experimental-backend
 # Polybar
 exec_always --no-startup-id ~/.config/polybar/docky/launch.sh
 
-# Remap keys
-exec_always --no-startup-id xmodmap ~/.Xmodmap
+
 
 
 # System startup
@@ -317,6 +318,9 @@ exec --no-startup-id ~/scripts/connect_pxc.sh
 
 # MPD
 exec --no-startup-id mpd
+
+# Remap keys
+#exec --no-startup-id xmodmap ~/.Xmodmap
 
 # Startup apps
 #exec --no-startup-id i3-msg 'workspace 1; exec firefox'

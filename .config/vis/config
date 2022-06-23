@@ -1,6 +1,6 @@
 export TERM=rxvt-256color
 audio.sources=pulse
 audio.stereo.enabled=false
-colors.scheme=pywal
-colors.override.terminal=true
-colors.override=true
+colors.scheme=tng
+#colors.override.terminal=true
+#colors.override=true
