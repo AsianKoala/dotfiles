@@ -274,9 +274,8 @@ set $rightmonitor "DP-2"
 workspace $ws1 output $middlemonitor
 workspace $ws2 output $leftmonitor
 workspace $ws3 output $rightmonitor
-workspace $ws4 output $rightmonitor
-workspace $ws5 output $leftmonitor
-workspace $ws6 output $middlemonitor
+workspace $ws4 output $leftmonitor
+workspace $ws5 output $middlemonitor
 
 
 # User bindings
@@ -286,11 +285,7 @@ bindsym $mod+Escape  exec betterlockscreen -l dimblur --span
 bindsym $mod+F12 exec i3-msg ';workspace number 2; workspace number 3; workspace number 1'
 
 
-# Window rules
-assign [class="discord"] $ws5
-for_window [class="Spotify"] move to workspace $ws4
-for_window [class="Pavucontrol"] move workspace $ws4
-
+assign [class="discord"] $ws4
 
 # System config
 # Monitor
@@ -298,7 +293,7 @@ exec_always --no-startup-id ~/.screenlayout/triple_fixed.sh
 
 # Background
 #exec_always --no-startup-id feh --no-fehbg --bg-fill /home/neil/pictures/wallpapers/aenami.png
-exec_always ~/scripts/setbg.sh
+exec_always --no-startup-id ~/scripts/setbg.sh
 
 # Picom 
 exec_always --no-startup-id picom --experimental-backend
@@ -314,7 +309,7 @@ exec_always --no-startup-id ~/.config/polybar/docky/launch.sh
 exec --no-startup-id redshift
 
 # PXC Bluetooth connection
-exec --no-startup-id ~/scripts/connect_pxc.sh
+#exec --no-startup-id ~/scripts/connect_pxc.sh
 
 # MPD
 exec --no-startup-id mpd

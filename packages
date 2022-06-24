@@ -17,11 +17,12 @@ calc
 cbonsai
 cli-visualizer
 cmake
-code-marketplace
+cups
 dhcpcd
 dialog
 discord
 dmenu
+dosbox
 efibootmgr
 escrotum-git
 exa
@@ -57,7 +58,6 @@ lib32-v4l-utils
 libinih
 lightnovel-cli-git
 linux-firmware
-lolcat
 lutris
 lxappearance
 make
@@ -67,7 +67,7 @@ mpd
 mpv
 ncmpcpp
 neofetch
-neovim
+neovim-git
 nerd-fonts-complete
 nerd-fonts-hack
 netctl
@@ -83,6 +83,7 @@ nvidia
 nvidia-settings
 ocl-icd
 opencl-nvidia
+opentabletdriver
 os-prober
 otf-ipafont
 pa-applet-git
@@ -92,10 +93,11 @@ patch
 pavucontrol
 perl-anyevent-i3
 picom
+pipewire-alsa
+pipewire-jack
+pipewire-pulse
 playerctl
 polybar
-pulseaudio-alsa
-pulseaudio-bluetooth
 python-black
 python-pip
 python-pywal
@@ -105,11 +107,12 @@ pywal-discord-git
 ranger
 redshift
 rofi
+samba
 sassc
 speedtest-cli
 spotify
 sudo
-todo-bin
+tk
 ttf-hanazono
 ttf-icomoon-feather
 ttf-impallari-cabin-font
@@ -120,8 +123,10 @@ unimatrix-git
 vim-plug
 wget
 wine-staging
+winetricks
 wireless-regdb
 wireless_tools
+wireplumber
 xclip
 xdg-user-dirs
 xorg-bdftopcf
