@@ -108,8 +108,8 @@ color2 = "magenta"
 
 # UI VISIBILITY
 # ---
-header_visibility = "no"
-statusbar_visibility = "no"
+header_visibility = "yes"
+statusbar_visibility = "yes"
 titles_visibility = "yes"
 
 # UI APPEARANCE

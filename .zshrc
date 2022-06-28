@@ -128,9 +128,10 @@ alias py='python3'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias bonsai='cbonsai -liw 10 -m "こんばんは ニール！"'
 alias matrix='unimatrix -s 96 -l k -c magenta'
-alias i3conf='vim ~/.config/i3/config'
+alias i3conf='nvim ~/.config/i3/config'
 alias sp='~/scripts/sp.sh'
 alias ytaudio="yt-dlp -f 'ba' -x"
+alias setbg="feh --bg-fill"
 
 #(cat ~/.cache/wal/sequences &)
 #

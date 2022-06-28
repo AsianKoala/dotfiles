@@ -317,6 +317,8 @@ exec --no-startup-id mpd
 # Remap keys
 #exec --no-startup-id xmodmap ~/.Xmodmap
 
+exec --no-startup-id nvidia-settings
+
 # Startup apps
 #exec --no-startup-id i3-msg 'workspace 1; exec firefox'
 #exec --no-startup-id i3-msg 'workspace 2; exec kitty --hold sh -c "ranger"'
