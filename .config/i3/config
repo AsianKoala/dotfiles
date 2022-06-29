@@ -274,7 +274,7 @@ set $rightmonitor "DP-2"
 workspace $ws1 output $middlemonitor
 workspace $ws2 output $leftmonitor
 workspace $ws3 output $rightmonitor
-workspace $ws4 output $leftmonitor
+workspace $ws4 output $rightmonitor
 workspace $ws5 output $middlemonitor
 
 
