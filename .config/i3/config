@@ -263,9 +263,22 @@ gaps outer 5
 # client.urgent           $bg     $bg     $fg  $bg       $bg
 # client.placeholder      $bg     $bg     $fg  $bg       $bg
 # client.background       $bg
-client.focused           #9aa5ce #364A82 #c0caf5 #9aa5ce   #9aa5ce
-client.focused_inactive  #16161d #16161d #c0caf5 #16161d   #16161d
-client.unfocused         #16161d #16161d #c0caf5 #16161d   #16161d
+# client.focused           #9aa5ce #364A82 #c0caf5 #9aa5ce   #9aa5ce
+# client.focused_inactive  #16161d #16161d #c0caf5 #16161d   #16161d
+# client.unfocused         #16161d #16161d #c0caf5 #16161d   #16161d
+
+
+client.focused           #5F4A65 #364A82 #c0caf5 #5F4A65   #5F4A65
+client.focused_inactive  #0b0822 #16161d #c0caf5 #16161d   #16161d
+client.unfocused         #0b0822 #16161d #c0caf5 #16161d   #16161d
+
+
+
+
+
+
+
+
 # monitor bindings
 set $middlemonitor "DP-4"
 set $leftmonitor "HDMI-0"

@@ -8,8 +8,8 @@ configuration {
 }
 
 //@theme "/dev/null"
-//@import "~/.cache/wal/colors-rofi-dark"
-@import "./theme.rasi"
+@import "~/.cache/wal/colors-rofi-dark"
+// @import "./theme.rasi"
 
 * {
   bg: inherit;
