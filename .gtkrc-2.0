@@ -4,7 +4,7 @@
 include "/home/neil/.gtkrc-2.0.mine"
 gtk-theme-name="TokyoNight"
 gtk-icon-theme-name="Papirus-Dark"
-gtk-font-name="Monospace 11"
+gtk-font-name="TerminessTTF Nerd Font"
 gtk-cursor-theme-name="Adwaita"
 gtk-cursor-theme-size=0
 gtk-toolbar-style=GTK_TOOLBAR_BOTH
