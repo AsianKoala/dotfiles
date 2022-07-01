@@ -36,3 +36,5 @@ fi
 
 # wal -R
 # exec i3
+
+exec bspwm

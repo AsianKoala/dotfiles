@@ -5,11 +5,11 @@ mpd_port = "6600"
 mpd_music_dir = "~/music"
 mpd_crossfade_time = "5"
 mpd_connection_timeout = "5"
-#visualizer_data_source = "/tmp/mpd.fifo"
-#visualizer_output_name = "my_fifo"
-#visualizer_in_stereo = "yes"
-#visualizer_type = "spectrum"
-#visualizer_look = "+|"
+visualizer_data_source = "/tmp/mpd.fifo"
+visualizer_output_name = "my_fifo"
+visualizer_in_stereo = "yes"
+visualizer_type = "spectrum"
+visualizer_look = "+|"
 #user_interface = "alternative"
 #alternative_header_first_line_format = "$(11) █▓▒░ $b$(13)%a$(end)$/b ░▒▓█$(end)"
 #alternative_header_second_line_format = "$(4)%t (%y)$(end)"
@@ -83,14 +83,14 @@ startup_screen = "playlist"
 
 # VISUALIZER
 # ---
-visualizer_data_source = "/tmp/mpd.fifo"
-visualizer_output_name = "my_fifo"
-visualizer_in_stereo = "no"
-visualizer_sync_interval = "30"
-visualizer_type = "ellipse"
-visualizer_fps = "60"
-visualizer_look = ●▮
-visualizer_color = "33,39,63,75,81,99,117,153,189"
+#visualizer_data_source = "/tmp/mpd.fifo"
+#visualizer_output_name = "my_fifo"
+#visualizer_in_stereo = "no"
+#visualizer_sync_interval = "30"
+#visualizer_type = "ellipse"
+#visualizer_fps = "60"
+#visualizer_look = ●▮
+#visualizer_color = "33,39,63,75,81,99,117,153,189"
 
 # PROGRESS BAR
 # ---
