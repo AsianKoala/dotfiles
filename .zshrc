@@ -135,7 +135,7 @@ alias ytaudio="yt-dlp -f 'ba' -x"
 alias setbg="feh --bg-fill"
 alias cpick="colorpicker --one-shot"
 alias icat="kitty +kitten icat --scale-up"
-alias scrot="escrotum"
+alias jpasmr="mpv --no-video"
 
 (cat ~/.cache/wal/sequences &)
 
