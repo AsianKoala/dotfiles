@@ -294,7 +294,7 @@ workspace $ws5 output $middlemonitor
 # User bindings
 # Flameshot snipping tool
 bindsym $mod+Shift+s  exec flameshot gui
-bindsym $mod+Escape  exec betterlockscreen -l dimblur --span
+bindsym $mod+Escape  exec betterlockscreen -l dimblur --display 1
 bindsym $mod+F12 exec i3-msg ';workspace number 2; workspace number 3; workspace number 1'
 
 

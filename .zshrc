@@ -134,7 +134,7 @@ alias sp='~/scripts/sp.sh'
 alias ytaudio="yt-dlp -f 'ba' -x"
 alias setbg="feh --bg-fill"
 alias cpick="colorpicker --one-shot"
-alias icat="kitty +kitten icat"
+alias icat="kitty +kitten icat --scale-up"
 alias scrot="escrotum"
 
 (cat ~/.cache/wal/sequences &)
