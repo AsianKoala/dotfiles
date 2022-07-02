@@ -86,8 +86,7 @@ plugins=(
 	copypath
 	copyfile
 	copybuffer
-	dirhistory
-    sudo
+  sudo
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -153,5 +152,4 @@ export EDITOR=/usr/bin/nvim
 export PATH=$PATH:/opt/gradle/gradle-7.4.2/bin
 
 
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-export PATH=$PATH:/home/neil/.spicetify
+#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

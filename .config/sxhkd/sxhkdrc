@@ -98,21 +98,21 @@ super + {o,i}
 # preselect
 #
 
-# # preselect the direction
-# super + ctrl + {h,j,k,l}
-# 	bspc node -p {west,south,north,east}
-#
-# # preselect the ratio
+# preselect the direction
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# preselect the ratio
 # super + ctrl + {1-9}
 # 	bspc node -o 0.{1-9}
-#
-# # cancel the preselection for the focused node
-# super + ctrl + space
-# 	bspc node -p cancel
-#
-# # cancel the preselection for the focused desktop
-# super + ctrl + shift + space
-# 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+# cancel the preselection for the focused node
+super + ctrl + space
+	bspc node -p cancel
+
+# cancel the preselection for the focused desktop
+super + ctrl + shift + space
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 #
 #
 # move/resize
@@ -129,15 +129,6 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
-
-
-
-
-
-
-
-
-
 
 
 
@@ -180,3 +171,11 @@ super + ctrl + shift + {grave,asciicircum,1-9,0,ssharp,minus,equal,acute}
 #send focused desktop to next/previous/{dir} monitor
 super + ctrl + shift + {n,p,h,j,k,l}
 	bspc desktop -m {next,prev,west,south,north,east} --follow
+
+
+
+super + shift + s
+  flameshot gui
+
+super + shift + Escape
+  betterlockscreen -l dimblur --display 1
