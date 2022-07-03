@@ -34,6 +34,9 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-wal -R &
+sleep 2
+~/.screenlayout/triple_fixed.sh
+wal -R
 nvidia-settings --load-config-only &
+redshift &
 exec bspwm

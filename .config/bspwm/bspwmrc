@@ -10,7 +10,14 @@ bspc monitor DP-2   -d 3 6 9
 
 bspc config border_width         2
 bspc config window_gap          40
-bspc config -m DP-4 top_padding 30
+# bspc config -m HDMI-0 top_padding 18
+# bspc config -m DP-4 top_padding 25
+# bspc config -m DP-2 top_padding 18
+
+bspc config top_padding 50
+bspc config bottom_padding 30
+bspc config left_padding 30
+bspc config right_padding 30
 
 bspc config focused_border_color "#93518B"
 
@@ -19,23 +26,9 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 bspc config pointer_motion_interval 7ms
-# bspc rule -a Gimp desktop='^8' state=floating follow=on
-# bspc rule -a Chromium desktop='^2'
-# bspc rule -a mplayer2 state=floating
-# bspc rule -a Kupfer.py focus=on
-# bspc rule -a Screenkey manage=off
-
-bspc rule -a Discord desktop='6'
-bspc rule -a Lutris desktop='4'
-
 bspc config focus_follows_pointer true
 bspc config pointer_follows_focus true
 
-# autostart
-xset m 0 0
-~/.screenlayout/triple_fixed.sh &
-~/scripts/setbg.sh &
-picom --experimental-backend &
-mpd &
-xsetroot -cursor_name left_ptr &
-~/.config/polybar/docky/launch.sh &
+~/.config/bspwm/windowrules.sh
+
+~/.config/bspwm/autostart.sh

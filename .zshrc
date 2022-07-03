@@ -135,6 +135,7 @@ alias setbg="feh --bg-fill"
 alias cpick="colorpicker --one-shot"
 alias icat="kitty +kitten icat --scale-up"
 alias jpasmr="mpv --no-video"
+alias wmc="xprop | grep WM_CLASS"
 
 (cat ~/.cache/wal/sequences &)
 

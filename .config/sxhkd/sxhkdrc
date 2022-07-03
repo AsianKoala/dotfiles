@@ -58,8 +58,13 @@ super + ctrl + {m,x,y,z}
 # super + {_,shift + }{h,j,k,l}
 # 	bspc node -{f,s} {west,south,north,east}
 
+# super + {h,j,k,l}
+# 	bspc node -f {west,south,north,east}
+
 super + {h,j,k,l}
-	bspc node -f {west,south,north,east}
+  dir={west,south,north,east}; \
+  bspc node "$dir.local" -f \ 
+    || bspc monitor "$dir" -f
 
 super + shift + {h,j,k,l}
     dir={west,south,north,east}; \
