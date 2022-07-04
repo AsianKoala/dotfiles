@@ -7,6 +7,7 @@
 .config/Google/
 .config/lutris/runners/
 .config/menus/
+.config/mpd/database
 .config/mpd/pid
 .config/mpd/state
 .config/mpd/sticker.sql
@@ -16,6 +17,8 @@
 .config/ncmpcpp/patterns.list
 .config/nvim/
 .config/pulse/
+.config/spotify/
+.config/spicetify/
 .config/systemd/
 .config/vis/vis.log
 .config/wal/
