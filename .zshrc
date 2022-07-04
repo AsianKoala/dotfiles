@@ -116,7 +116,7 @@ source $ZSH/oh-my-zsh.sh
 #echo '\e[5 q'
 
 # set keyboard rate
-xset r rate 190 60
+xset r rate 200 60
 
 
 alias ranger="ranger && cat /home/neil/.cache/wal/sequences"
