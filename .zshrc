@@ -134,8 +134,12 @@ alias ytaudio="yt-dlp -f 'ba' -x"
 alias setbg="feh --bg-fill"
 alias cpick="colorpicker --one-shot"
 alias icat="kitty +kitten icat --scale-up"
-alias jpasmr="mpv --no-video"
 alias wmc="xprop | grep WM_CLASS"
+
+function jasmr() {
+  jasmrpath='/home/neil/pictures/anime/nsfw/degen/dlsite rips/'$1'.mp3'
+  mpv --no-video $jasmrpath
+}
 
 (cat ~/.cache/wal/sequences &)
 
@@ -153,4 +157,7 @@ export EDITOR=/usr/bin/nvim
 export PATH=$PATH:/opt/gradle/gradle-7.4.2/bin
 
 
+#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 #[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
