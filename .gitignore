@@ -16,6 +16,8 @@
 .config/ncmpcpp/error.log
 .config/ncmpcpp/patterns.list
 .config/nvim/
+.config/OpenTabletDriver/Plugins/
+.config/OpenTabletDriver/Presets/
 .config/pulse/
 .config/spotify/
 .config/spicetify/
@@ -23,3 +25,5 @@
 .config/vis/vis.log
 .config/wal/
 .config/wal-discord/
+.config/QtProject.conf
+.config/pavucontrol.ini

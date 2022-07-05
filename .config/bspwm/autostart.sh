@@ -6,3 +6,4 @@ picom --experimental-backend &
 mpd &
 xsetroot -cursor_name left_ptr &
 ~/.config/polybar/docky/launch.sh &
+~/.config/bspwm/2bspwm &

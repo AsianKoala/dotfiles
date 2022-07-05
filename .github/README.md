@@ -1,6 +1,6 @@
 <div align="center">
 
-![my rice](https://i.imgur.com/5az0PNm.png)
+![my rice](https://i.imgur.com/Xekq7jd.png)
 
 </div>
 

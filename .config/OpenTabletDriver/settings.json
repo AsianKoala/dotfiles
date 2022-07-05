@@ -1,0 +1,122 @@
+{
+  "Profiles": [
+    {
+      "Tablet": "Wacom PTH-451",
+      "OutputMode": {
+        "Path": "OpenTabletDriver.Desktop.Output.AbsoluteMode",
+        "Settings": [],
+        "Enable": true
+      },
+      "Filters": [
+        {
+          "Path": "TabletDriverFilters.Devocub.Antichatter",
+          "Settings": [
+            {
+              "Property": "AntichatterMultiplier",
+              "Value": 1.0
+            },
+            {
+              "Property": "AntichatterOffsetX",
+              "Value": null
+            },
+            {
+              "Property": "AntichatterOffsetY",
+              "Value": 1.0
+            },
+            {
+              "Property": "PredictionEnabled",
+              "Value": null
+            },
+            {
+              "Property": "PredictionStrength",
+              "Value": 1.1
+            },
+            {
+              "Property": "PredictionSharpness",
+              "Value": 1.0
+            },
+            {
+              "Property": "PredictionOffsetX",
+              "Value": 3.0
+            },
+            {
+              "Property": "PredictionOffsetY",
+              "Value": 0.3
+            },
+            {
+              "Property": "Frequency",
+              "Value": 1000.0
+            },
+            {
+              "Property": "Latency",
+              "Value": 10.0
+            },
+            {
+              "Property": "AntichatterStrength",
+              "Value": 5.0
+            }
+          ],
+          "Enable": true
+        }
+      ],
+      "AbsoluteModeSettings": {
+        "Display": {
+          "Width": 2560.0,
+          "Height": 1440.0,
+          "X": 3200.0,
+          "Y": 958.0,
+          "Rotation": 0.0
+        },
+        "Tablet": {
+          "Width": 75.0,
+          "Height": 50.0,
+          "X": 38.5,
+          "Y": 26.5,
+          "Rotation": 0.0
+        },
+        "EnableClipping": true,
+        "EnableAreaLimiting": false,
+        "LockAspectRatio": false
+      },
+      "RelativeModeSettings": {
+        "XSensitivity": 10.0,
+        "YSensitivity": 10.0,
+        "RelativeRotation": 0.0,
+        "RelativeResetDelay": "00:00:00.1000000"
+      },
+      "Bindings": {
+        "TipActivationThreshold": 0.0,
+        "TipButton": {
+          "Path": "OpenTabletDriver.Desktop.Binding.MouseBinding",
+          "Settings": [
+            {
+              "Property": "Button",
+              "Value": "Left"
+            }
+          ],
+          "Enable": true
+        },
+        "EraserActivationThreshold": 0.0,
+        "EraserButton": null,
+        "PenButtons": [
+          null,
+          null
+        ],
+        "AuxButtons": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "MouseButtons": [],
+        "MouseScrollUp": null,
+        "MouseScrollDown": null
+      }
+    }
+  ],
+  "LockUsableAreaDisplay": true,
+  "LockUsableAreaTablet": true,
+  "Tools": []
+}
