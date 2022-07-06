@@ -7,7 +7,7 @@ bspc rule -r "*"
 bspc wm -O HDMI-0 DP-4 DP-2
 
 bspc monitor HDMI-0 -d 2 5 8 
-bspc monitor DP-4   -d 1 4 7 
+bspc monitor DP-4   -d 1 4 7
 bspc monitor DP-2   -d 3 6 9
 
 # bspc config border_width         2
