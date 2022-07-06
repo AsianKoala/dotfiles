@@ -4,6 +4,7 @@
 .config/dconf
 .config/discord/
 .config/discordo/
+.config/GIMP/
 .config/Google/
 .config/lutris/runners/
 .config/menus/
@@ -27,3 +28,4 @@
 .config/wal-discord/
 .config/QtProject.conf
 .config/pavucontrol.ini
+pictures/wallpapers/kogecha/

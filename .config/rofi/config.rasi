@@ -30,6 +30,8 @@ configuration {
 window {
   width: 25%;
   border-radius: 30px;
+  border: 2;
+  border-color: #93518B;
 }
 
 element {
