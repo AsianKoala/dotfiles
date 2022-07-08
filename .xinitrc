@@ -42,7 +42,7 @@ nvidia-settings --load-config-only
 displaycal-apply-profiles &
 xsetroot -cursor_name left_ptr &
 xset m 0 0 &
-wal -R 
+wal -R -n
 $HOME/scripts/setbg.sh &
 picom --experimental-backend &
 mpd &

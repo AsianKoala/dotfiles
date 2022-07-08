@@ -26,7 +26,6 @@
 .config/spicetify/
 .config/systemd/
 .config/vis/vis.log
-.config/wal/
 .config/wal-discord/
 .config/QtProject.conf
 .config/pavucontrol.ini
