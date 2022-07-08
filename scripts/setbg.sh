@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-fill '~/pictures/gimp/88876556_exposure.png' 
+feh --bg-fill '/home/neil/downloads/660859.jpg' 

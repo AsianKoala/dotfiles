@@ -1,7 +1,9 @@
 .config/BetterDiscord/data/
 .config/BetterDiscord/plugins/
 .config/BetterDiscord Installer/
-.config/dconf
+.config/color/
+.config/DisplayCAL/
+.config/dconf/
 .config/discord/
 .config/discordo/
 .config/GIMP/
@@ -29,3 +31,4 @@
 .config/QtProject.conf
 .config/pavucontrol.ini
 pictures/wallpapers/kogecha/
+

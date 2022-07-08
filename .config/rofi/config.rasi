@@ -1,5 +1,5 @@
 configuration {
-  display-drun: "Applications:";
+  display-drun: "Neko Run!:";
   display-window: "Windows:";
   drun-display-format: "{icon} {name}";
   // font: "JetBrainsMono Nerd Font Medium 10";
@@ -21,6 +21,8 @@ configuration {
 
   background-color: inherit;
   
+  selected-normal-background: #5F4A65;
+
   border: 0;
   margin: 0;
   padding: 0;
@@ -28,8 +30,8 @@ configuration {
 }
 
 window {
-  width: 25%;
-  border-radius: 30px;
+  width: 480px;
+  border-radius: 15px;
   border: 2;
   border-color: #93518B;
 }
@@ -41,6 +43,8 @@ element {
 
 element selected {
   text-color: inherit;
+  background-color: #5F4A65;
+
 }
 
 element-text {

@@ -38,8 +38,6 @@ border_color_out_normal=0B0822
 border_color_out_focused=0B0822
 
 
-
-
 _chwb2() {
     colorType=$1
     shift
@@ -64,3 +62,4 @@ bspc subscribe node_state node_geometry node_focus | while read msg; do
     _chwb2 focused $(focused_window)
     _chwb2 normal $(active_windows)
 done
+
