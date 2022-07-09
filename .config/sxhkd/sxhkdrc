@@ -124,16 +124,24 @@ super + ctrl + shift + space
 #
 
 # expand a window by moving one of its side outward
-super + alt + {h,j,k,l}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+# super + alt + {h,j,k,l}
+# 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+#
+# # contract a window by moving one of its side inward
+# super + alt + shift + {h,j,k,l}
+# 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
-# contract a window by moving one of its side inward
-super + alt + shift + {h,j,k,l}
-	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+super + z : {h,j,k,l}
+  STEP=20; SELECTION={1,2,3,4}; \
+  bspc node -z $(echo "left -$STEP 0,bottom 0 $STEP,top 0 -$STEP,right $STEP 0" | cut -d',' -f$SELECTION) || \
+  bspc node -z $(echo "right -$STEP 0,top 0 $STEP,bottom 0 -$STEP,left $STEP 0" | cut -d',' -f$SELECTION)
+
+
+
 
 # move a floating window
-super + {Left,Down,Up,Right}
-	bspc node -v {-20 0,0 20,0 -20,20 0}
+# super + {Left,Down,Up,Right}
+# 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 
 

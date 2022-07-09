@@ -6,7 +6,7 @@ system:
   disable_compositor: true
   env:
     DXVK_LOG_LEVEL: none
-    DXVK_STATE_CACHE_PATH: '0'
+    DXVK_STATE_CACHE: '0'
     STAGING_SHARED_MEMORY: '1'
     WINE_LARGE_ADDRESS_AWARE: '1'
     __GL_SHADER_DISK_CACHE: '1'
