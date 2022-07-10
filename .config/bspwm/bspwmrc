@@ -20,16 +20,16 @@ bspc config bottom_padding 30
 bspc config left_padding 30
 bspc config right_padding 30
 
-bspc config border_width         2
-bspc config focused_border_color "#93518B"
-bspc config active_border_color "#5F4A65"
-bspc config normal_border_color "#5F4A65"
+# bspc config border_width         2
+# bspc config focused_border_color "#93518B"
+# bspc config active_border_color "#5F4A65"
+# bspc config normal_border_color "#5F4A65"
 
 # to prevent double border from being weird (need a permanent fix though)
-# bspc config normal_border_color       '#000000'
-# bspc config active_border_color       '#000000'
-# bspc config focused_border_color      '#000000'
-# bspc config border_width 14
+bspc config normal_border_color       '#000000'
+bspc config active_border_color       '#000000'
+bspc config focused_border_color      '#000000'
+bspc config border_width 14
 
 # bspc config ignore_ewmh_fullscreen all
 bspc config ignore_ewmh_focus true

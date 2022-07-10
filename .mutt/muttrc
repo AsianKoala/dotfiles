@@ -131,22 +131,56 @@ bind    pager   w           previous-page
 # color   body        brightred default [\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+
 # color   body        brightblue default (https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9]+
 
-color   hdrdefault   yellow            black
-color   quoted       blue              black
-color   signature    blue              black
-color   attachment   red               black
-color   message      brightred         black
-color   error        brightred         black
-color   indicator    black             yellow
-color   status       white             blue
-color   tree         white             black
-color   normal       white             black
-color   markers      red               black
-color   search       white             black
-color   tilde        brightmagenta     black
-color   index        blue              black ~F
-color   index        white             black "~N|~O"
+# color   hdrdefault   yellow            black
+# color   quoted       blue              black
+# color   signature    blue              black
+# color   attachment   red               black
+# color   message      brightred         black
+# color   error        brightred         black
+# color   indicator    black             yellow
+# color   status       white             blue
+# color   tree         white             black
+# color   normal       white             black
+# color   markers      red               black
+# color   search       white             black
+# color   tilde        brightmagenta     black
+# color   index        blue              black ~F
+# color   index        white             black "~N|~O"
+color normal white default
 
+color attachment red default
+
+color hdrdefault cyan default
+
+color indicator brightyellow default
+
+color markers brightred default
+
+color quoted cyan default
+
+color quoted1 magenta default
+
+color quoted2 blue default
+
+color signature yellow default
+
+color status default default
+
+color tilde blue default
+
+color tree brightred default
+
+color header brightyellow default ^From:
+
+color header yellow default ^To:
+
+color header brightcyan default ^Date
+
+color header yellow default ^Cc:
+
+color header brightgreen default ^Subject:
+
+color header brightcyan default ^X-TRASH:
 # For better looks
 set markers=no # don't put '+' at the beginning of wrapped lines
 set pager_index_lines= 5 # how large is the index window?

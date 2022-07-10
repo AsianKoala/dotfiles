@@ -38,6 +38,7 @@ sleep 2
 
 # autostart
 $HOME/.screenlayout/triple_fixed.sh
+systemctl --user restart pipewire # bruh moment
 nvidia-settings --load-config-only
 displaycal-apply-profiles &
 xsetroot -cursor_name left_ptr &
@@ -46,6 +47,11 @@ wal -R -n
 $HOME/scripts/setbg.sh &
 picom --experimental-backend &
 mpd &
+
+
+# fuck you java
+export _JAVA_AWT_WM_NONREPARENTING=1
+export AWT_TOOLKIT=MToolkit
 
 # wm
 exec bspwm

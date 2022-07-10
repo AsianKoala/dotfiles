@@ -87,4 +87,6 @@ export PATH="$PATH:$GEM_HOME/bin"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export EDITOR=/usr/bin/nvim
 export PATH=$PATH:/opt/gradle/gradle-7.4.2/bin
-
+export XDG_CONFIG_HOME="$HOME/.config"
+export _JAVA_AWT_WM_NONREPARENTING=1
+export AWT_TOOLKIT=MToolkit
