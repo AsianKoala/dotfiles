@@ -60,3 +60,26 @@ class my_edit(Command):
         # This is a generic tab-completion function that iterates through the
         # content of the current directory.
         return self._tab_directory_content()
+
+class setbg(Command):
+
+    def execute(self):
+        if self.arg(1):
+            target_filename = self.rest(1)
+        else:
+            target_filename = self.fm.thisfile.path 
+
+        if not os.path.exists(target_filename):
+            self.fm.notify("The given file does not exist!", bad=True)
+            return
+
+        self.fm.run("feh --no-fehbg --bg-fill {}".format(target_filename))
+
+        self.fm.notify('Set wallpaper!')
+
+    def tab(self, tabnum):
+        return self._tab_directory_content()
+
+
+
+

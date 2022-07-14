@@ -1,6 +1,6 @@
 ncmpcpp_directory = "~/.config/ncmpcpp"
 lyrics_directory = "~/.lyrics"
-mpd_host = "127.0.0.1"
+mpd_host = "10.0.0.132"
 mpd_port = "6600"
 mpd_music_dir = "~/music"
 mpd_crossfade_time = "5"

@@ -192,3 +192,7 @@ super + shift + s
 
 super + shift + Escape
   betterlockscreen -l dimblur --display 1
+
+
+super + p 
+  bspc window -t sticky 

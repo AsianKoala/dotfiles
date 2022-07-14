@@ -8,6 +8,7 @@
 .config/discordo/
 .config/GIMP/
 .config/Google/
+.config/instaloader/
 .config/lutris/runners/
 .config/menus/
 .config/mpd/database
@@ -21,6 +22,7 @@
 .config/nvim/
 .config/OpenTabletDriver/Plugins/
 .config/OpenTabletDriver/Presets/
+.config/obs-studio/
 .config/pulse/
 .config/spotify/
 .config/spicetify/
