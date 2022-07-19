@@ -61,6 +61,9 @@ class my_edit(Command):
         # content of the current directory.
         return self._tab_directory_content()
 
+def run_cmd(command: Command, cmd, filename):
+    command.fm.run("{} '{}' &".format(cmd, filename))
+
 class setbg(Command):
 
     def execute(self):
@@ -73,12 +76,37 @@ class setbg(Command):
             self.fm.notify("The given file does not exist!", bad=True)
             return
 
-        self.fm.run("feh --no-fehbg --bg-fill {}".format(target_filename))
+        run_cmd(self, "feh --no-fehbg --bg-fill", target_filename)
 
         self.fm.notify('Set wallpaper!')
 
     def tab(self, tabnum):
         return self._tab_directory_content()
+
+
+class gimp(Command):
+
+    def execute(self):
+        if self.arg(1):
+            target_filename = self.rest(1)
+        else:
+            target_filename = self.fm.thisfile.path 
+
+        if not os.path.exists(target_filename):
+            self.fm.notify("The given file does not exist!", bad=True)
+            return
+
+        run_cmd(self, "gimp", target_filename)
+
+        self.fm.notify("Opened image in gimp")
+
+    def tab(self, tabnum):
+        return self._tab_directory_content()
+
+
+
+
+
 
 
 
