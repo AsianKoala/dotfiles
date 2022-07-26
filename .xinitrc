@@ -38,12 +38,17 @@ sleep 2
 
 # autostart
 $HOME/.screenlayout/triple_fixed.sh
+wal -R -n
 systemctl --user restart pipewire # bruh moment
+
 nvidia-settings --load-config-only
 displaycal-apply-profiles &
+
 xsetroot -cursor_name left_ptr &
 xset m 0 0 &
-wal -R -n
+xset -dpms &
+xset s off &
+
 $HOME/scripts/setbg.sh &
 picom --experimental-backend &
 mpd &

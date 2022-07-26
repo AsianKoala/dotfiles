@@ -49,7 +49,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 
-xset r rate 200 60
+xset r rate 240 60
 
 alias ranger="cat /home/neil/.cache/wal/sequences && ranger"
 alias ls='exa --icons'

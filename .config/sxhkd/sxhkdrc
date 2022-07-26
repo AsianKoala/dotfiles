@@ -74,8 +74,8 @@ super + shift + {h,j,k,l}
 
 
 # focus the node for the given path jump
-super + {p,b,comma,period}
-	bspc node -f @{parent,brother,first,second}
+# super + {p,b,comma,period}
+# 	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous window in the current desktop
 super + {_,shift + }c
@@ -193,6 +193,8 @@ super + shift + s
 super + shift + Escape
   betterlockscreen -l dimblur --display 1
 
+super + b
+  firefox
 
-super + p 
-  bspc window -t sticky 
+
+
