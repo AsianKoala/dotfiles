@@ -198,3 +198,6 @@ super + b
 
 super + c 
   clipster -sp
+
+super + period 
+  rofi -modi emoji -show emoji -kb-custom-1 Ctrl+C
