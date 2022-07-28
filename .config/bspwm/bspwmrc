@@ -50,4 +50,7 @@ bspc config pointer_follows_monitor true
 
 ~/.config/bspwm/windowrules.sh
 
-~/.config/bspwm/autostart.sh
+~/scripts/autostart.sh
+
+~/.config/polybar/docky/launch.sh &
+~/.config/bspwm/2bspwm &

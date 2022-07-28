@@ -41,7 +41,6 @@ plugins=(
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 	copypath
-	copyfile
 	copybuffer
   sudo
 )
@@ -60,8 +59,6 @@ alias py='python3'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias bonsai='cbonsai -liw 10 -m "こんばんは ニール！"'
 alias matrix='unimatrix -s 96 -l k -c magenta'
-alias i3conf='nvim $HOME/.config/i3/config'
-alias sp='$HOME/scripts/sp.sh'
 alias ytaudio="yt-dlp -f 'ba' -x"
 alias setbg="feh --no-fehbg --bg-fill"
 alias cpick="colorpicker --one-shot"

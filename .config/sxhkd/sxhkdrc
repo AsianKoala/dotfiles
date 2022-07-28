@@ -78,8 +78,8 @@ super + shift + {h,j,k,l}
 # 	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous window in the current desktop
-super + {_,shift + }c
-	bspc node -f {next,prev}.local.!hidden.window
+# super + {_,shift + }c
+# 	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
@@ -90,10 +90,10 @@ super + {grave,Tab}
 	bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
-super + {o,i}
-	bspc wm -h off; \
-	bspc node {older,newer} -f; \
-	bspc wm -h on
+# super + {o,i}
+# 	bspc wm -h off; \
+# 	bspc node {older,newer} -f; \
+# 	bspc wm -h on
 
 # focus or send to the given desktop
 # super + {_,shift + }{1-9,0}
@@ -131,10 +131,10 @@ super + ctrl + shift + space
 # super + alt + shift + {h,j,k,l}
 # 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
-super + z : {h,j,k,l}
-  STEP=20; SELECTION={1,2,3,4}; \
-  bspc node -z $(echo "left -$STEP 0,bottom 0 $STEP,top 0 -$STEP,right $STEP 0" | cut -d',' -f$SELECTION) || \
-  bspc node -z $(echo "right -$STEP 0,top 0 $STEP,bottom 0 -$STEP,left $STEP 0" | cut -d',' -f$SELECTION)
+# super + z : {h,j,k,l}
+#   STEP=20; SELECTION={1,2,3,4}; \
+#   bspc node -z $(echo "left -$STEP 0,bottom 0 $STEP,top 0 -$STEP,right $STEP 0" | cut -d',' -f$SELECTION) || \
+#   bspc node -z $(echo "right -$STEP 0,top 0 $STEP,bottom 0 -$STEP,left $STEP 0" | cut -d',' -f$SELECTION)
 
 
 
@@ -196,5 +196,5 @@ super + shift + Escape
 super + b
   firefox
 
-
-
+super + c 
+  clipster -sp
