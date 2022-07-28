@@ -65,6 +65,10 @@ alias cpick="colorpicker --one-shot"
 alias icat="kitty +kitten icat --scale-up"
 alias wmc="xprop | grep WM_CLASS"
 
+# sunglasses emoji
+alias vim='nvim'
+alias vi='nvim'
+
 function jasmr() {
   jasmrpath='/home/neil/pictures/anime/nsfw/degen/dlsite rips/'$1'.mp3'
   mpv --no-video $jasmrpath
