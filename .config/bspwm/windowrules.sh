@@ -8,3 +8,4 @@ bspc rule -a discord desktop='6'
 bspc rule -a 'jetbrains-studio' state=floating follow=on
 bspc rule -a obs state=floating
 bspc rule -a chatterino state=floating
+bspc rule -a 'Fcitx-config-gtk3' state=floating

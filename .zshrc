@@ -55,7 +55,12 @@ export PATH=$PATH:/opt/gradle/gradle-7.4.2/bin
 export XDG_CONFIG_HOME="$HOME/.config"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export AWT_TOOLKIT=MToolkit
-
+# export GTK_IM_MODULE=fcitx
+# export QT_IM_MODULE=fcitx
+# export XMODIFIERS=@im=fcitx
+# export GTK_IM_MODULE=fcitx
+# export XMODIFIERS=@im=fcitx
+# export QT_IM_MODULE=fcitx
 
 # sunglasses emoji (x2)
 if [[ -n $SSH_CONNECTION ]] ; then
