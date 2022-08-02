@@ -25,8 +25,6 @@ if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
 
-# start some nice programs
-
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
   [ -x "$f" ] && . "$f"
@@ -34,19 +32,16 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-sleep 2
-
-# autostart
-$HOME/.screenlayout/triple_fixed.sh
-wal -R -n
-systemctl --user restart pipewire # bruh moment
-clipster -d
-
-$HOME/scripts/autostart.sh
-
 # fuck you java
 export _JAVA_AWT_WM_NONREPARENTING=1
 export AWT_TOOLKIT=MToolkit
+
+sleep 2
+
+
+# autostart
+$HOME/.screenlayout/triple_fixed.sh
+systemctl --user restart pipewire # bruh moment
 
 # wm
 exec bspwm

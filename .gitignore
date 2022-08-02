@@ -6,9 +6,11 @@
 .config/dconf/
 .config/discord/
 .config/discordo/
+.config/filezilla/
 .config/GIMP/
 .config/Google/
 .config/instaloader/
+.config/lightnovel-cli
 .config/lutris/runners/
 .config/menus/
 .config/mpd/database
@@ -31,5 +33,3 @@
 .config/wal-discord/
 .config/QtProject.conf
 .config/pavucontrol.ini
-pictures/wallpapers/kogecha/
-

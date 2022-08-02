@@ -1,1 +1,2 @@
 set statusbar-page-percent true
+set guioptions none

@@ -10,10 +10,7 @@ bspc monitor HDMI-0 -d 2 5 8
 bspc monitor DP-4   -d 1 4 7
 bspc monitor DP-2   -d 3 6 9
 
-bspc config window_gap          40
-# bspc config -m HDMI-0 top_padding 18
-# bspc config -m DP-4 top_padding 25
-# bspc config -m DP-2 top_padding 18
+bspc config window_gap          30
 
 bspc config top_padding 50
 bspc config bottom_padding 30
@@ -27,16 +24,10 @@ bspc config right_padding 30
 
 # to prevent double border from being weird (need a permanent fix though)
 bspc config border_width 14
-
 bspc config normal_border_color       '#000000'
 bspc config active_border_color       '#000000'
 bspc config focused_border_color      '#000000'
 
-# bspc config normal_border_color       '#0B0822'
-# bspc config active_border_color       '#0B0822'
-# bspc config focused_border_color      '#0B0822'
-
-# bspc config ignore_ewmh_fullscreen all
 bspc config ignore_ewmh_focus true
 
 bspc config split_ratio          0.5
@@ -48,9 +39,6 @@ bspc config focus_follows_pointer true
 bspc config pointer_follows_focus true
 bspc config pointer_follows_monitor true
 
-~/.config/bspwm/windowrules.sh
-
-~/scripts/autostart.sh
-
-~/.config/polybar/docky/launch.sh &
-~/.config/bspwm/2bspwm &
+~/.config/bspwm/windowrules.sh 
+~/.config/bspwm/autostart.sh 
+~/.config/bspwm/2bspwm
