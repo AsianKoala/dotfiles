@@ -201,3 +201,14 @@ super + c
 
 super + period 
   rofi -modi emoji -show emoji -kb-custom-1 Ctrl+C
+
+# mpd 
+super + Delete
+  mpc prev 
+
+super + End 
+  mpc toggle
+
+super + Next 
+  mpc next 
+

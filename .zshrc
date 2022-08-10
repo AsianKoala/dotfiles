@@ -36,6 +36,7 @@ alias ytaudio="yt-dlp -f 'ba' -x"
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias bonsai='cbonsai -liw 10 -m "こんばんは ニール！"'
 alias matrix='unimatrix -s 96 -l k -c magenta'
+alias xev='~/scripts/xev.sh'
 
 function mkc() {
   mkdir $1 
