@@ -15,4 +15,5 @@ system:
   prelaunch_wait: true
 wine:
   MouseWarpOverride: enable
+  fsync: true
   version: lutris-ge-lol-7.0-2-x86_64

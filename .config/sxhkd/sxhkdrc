@@ -190,7 +190,7 @@ super + ctrl + shift + {n,p,h,j,k,l}
 super + shift + s
   flameshot gui
 
-super + shift + Escape
+super + Home
   betterlockscreen -l dimblur --display 1
 
 super + b
@@ -204,11 +204,16 @@ super + period
 
 # mpd 
 super + Delete
-  mpc prev 
+  mpc volume -1
 
 super + End 
   mpc toggle
 
 super + Next 
-  mpc next 
+  mpc volume +1
 
+super + Insert 
+  mpc prev 
+
+super + Prior 
+  mpc next 

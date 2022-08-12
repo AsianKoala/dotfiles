@@ -6,6 +6,7 @@
 .config/dconf/
 .config/discord/
 .config/discordo/
+.config/fcitx/
 .config/filezilla/
 .config/GIMP/
 .config/Google/
@@ -13,6 +14,7 @@
 .config/lightnovel-cli
 .config/lutris/runners/
 .config/menus/
+.config/mozc/
 .config/mpd/database
 .config/mpd/pid
 .config/mpd/state

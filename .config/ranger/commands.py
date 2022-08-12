@@ -61,8 +61,8 @@ class my_edit(Command):
         # content of the current directory.
         return self._tab_directory_content()
 
-def run_cmd(command: Command, cmd, filename):
-    command.fm.run("{} '{}' &".format(cmd, filename))
+def run_cmd(command: Command, cmd, filename, post_cmd=''):
+    command.fm.run("{} '{}' {} &".format(cmd, filename, post_cmd))
 
 class setbg(Command):
 
@@ -103,6 +103,21 @@ class gimp(Command):
     def tab(self, tabnum):
         return self._tab_directory_content()
 
+class wal(Command):
+
+    def execute(self):
+        if self.arg(1):
+            target_filename = self.rest(1)
+        else:
+            target_filename = self.fm.thisfile.path 
+
+        if not os.path.exists(target_filename):
+            self.fm.notify("The given file does not exist!", bad=True)
+            return
+
+        run_cmd(self, "wal -i", target_filename, '-n')
+
+        self.fm.notify("Set pywal theme")
 
 
 
