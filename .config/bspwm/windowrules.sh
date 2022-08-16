@@ -10,3 +10,4 @@ bspc rule -a obs state=floating
 bspc rule -a chatterino state=floating
 bspc rule -a 'Fcitx-config-gtk3' state=floating
 bspc rule -a Anki state=floating
+bspc rule -a 'OpenTabletDriver.UX.Gtk' state=floating

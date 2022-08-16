@@ -32,7 +32,8 @@ alias vim='nvim'
 alias vi='nvim'
 alias setbg="feh --bg-fill"
 alias cpick="colorpicker --one-shot"
-alias ytaudio="yt-dlp -f 'ba' -x"
+alias ytaudio="yt-dlp -f 'ba' -x --no-playlist"
+alias ytplaylist="yt-dlp -f 'ba' -x"
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias bonsai='cbonsai -liw 10 -m "こんばんは ニール！"'
 alias matrix='unimatrix -s 96 -l k -c magenta'

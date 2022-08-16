@@ -190,7 +190,7 @@ super + ctrl + shift + {n,p,h,j,k,l}
 super + shift + s
   flameshot gui
 
-super + Home
+super + Scroll_Lock
   betterlockscreen -l dimblur --display 1
 
 super + b
@@ -201,6 +201,12 @@ super + c
 
 super + period 
   rofi -modi emoji -show emoji -kb-custom-1 Ctrl+C
+
+super + Print
+  pkill picom &
+
+super + Pause
+  picom --experimental-backend &
 
 # mpd 
 super + Delete
@@ -217,3 +223,7 @@ super + Insert
 
 super + Prior 
   mpc next 
+
+super + Home
+  mpc single
+  

@@ -1,0 +1,45 @@
+window:
+  # Window dimensions (changes require restart)
+  #
+  # Specified in number of columns/lines, not pixels. If both are zero this
+  # setting is ignored.
+  # dimensions:
+  #   columns: 100
+  #   lines: 85
+
+  # Window padding (changes require restart)
+  #
+  # Blank space added around the window in pixels. This padding is not scaled by
+  # DPI and the specified value is always added at both opposing sides.
+  padding:
+    x: 20
+    y: 20
+
+  opacity: 0.90
+
+# Font configuration (changes require restart)
+font:
+  # The normal (roman) font face to use.
+  # Style can be specified to pick a specific face.
+  normal:
+    family: TerminessTTF Nerd Font 
+
+  # The bold font face
+  bold:
+    family: TerminessTTF Nerd Font 
+
+  # The italic font face
+  italic:
+    family: TerminessTTF Nerd Font 
+
+  # Point size of the font
+  size: 14.0
+
+cursor:
+  style:
+    shape: Beam
+    blinking: Always
+  blink_interval: 500
+  unfocused_hollow: true
+  thickness: 0.25
+
