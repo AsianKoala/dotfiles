@@ -1,7 +1,7 @@
 #!/bin/sh
 nvidia-settings --load-config-only
 displaycal-apply-profiles &
-pkill redshift
+# pkill redshift
 
 xsetroot -cursor_name left_ptr &
 xset m 0 0 &
