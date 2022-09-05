@@ -39,12 +39,12 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
-sleep 2
+# sleep 2
 
 
 # autostart
 $HOME/.screenlayout/triple_fixed.sh
-systemctl --user restart pipewire # bruh moment
+(systemctl --user restart pipewire; sleep 5; mpd &) & # this is so scuffed but idc
 (sleep 5; $HOME/scripts/xautostart.sh) &
 
 # wm

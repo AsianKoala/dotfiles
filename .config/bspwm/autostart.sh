@@ -5,7 +5,6 @@ displaycal-apply-profiles &
 
 $HOME/scripts/setbg.sh &
 picom --experimental-backend &
-mpd &
 clipster -d &
 fcitx &
 

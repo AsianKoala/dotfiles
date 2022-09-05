@@ -1,5 +1,5 @@
 #!/bin/sh
-xmodmap $HOME/.Xmodmap
+(sleep 5; xmodmap $HOME/.Xmodmap) &
 xsetroot -cursor_name left_ptr 
 xset m 0 0 
 xset s off -dpms
