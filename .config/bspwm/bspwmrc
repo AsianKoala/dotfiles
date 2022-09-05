@@ -12,12 +12,12 @@ bspc monitor DP-2   -d 3 6 9
 
 bspc config window_gap          30
 
-bspc config top_padding 30
-bspc config bottom_padding 30
-bspc config left_padding 30
-bspc config right_padding 30
+bspc config top_padding 35
+bspc config bottom_padding 15
+bspc config left_padding 15
+bspc config right_padding 15
 
-bspc config border_width         3
+bspc config border_width         4
 bspc config focused_border_color "#93518B"
 bspc config active_border_color "#5F4A65"
 bspc config normal_border_color "#5F4A65"

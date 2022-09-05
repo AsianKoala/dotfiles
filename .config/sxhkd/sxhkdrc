@@ -197,7 +197,7 @@ super + b
   firefox
 
 super + c 
-  clipster -sp
+  clipster -sc
 
 super + period 
   rofi -modi emoji -show emoji -kb-custom-1 Ctrl+C

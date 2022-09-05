@@ -32,8 +32,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-xmodmap $HOME/.Xmodmap
-
 # fuck you java
 export _JAVA_AWT_WM_NONREPARENTING=1
 export AWT_TOOLKIT=MToolkit
@@ -47,6 +45,7 @@ sleep 2
 # autostart
 $HOME/.screenlayout/triple_fixed.sh
 systemctl --user restart pipewire # bruh moment
+(sleep 5; $HOME/scripts/xautostart.sh) &
 
 # wm
 exec bspwm

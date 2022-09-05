@@ -31,7 +31,7 @@ configuration {
 
 window {
   width: 480px;
-  border-radius: 15px;
+  border-radius: 20px;
   border: 2;
   border-color: #93518B;
 }
