@@ -29,11 +29,11 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
-
 # autostart
 $HOME/.screenlayout/triple_fixed.sh
 (systemctl --user restart pipewire; sleep 5; mpd &) & # this is so scuffed but idc
 (sleep 10; $HOME/scripts/xautostart.sh) &
+setxkbmap -option caps:swapescape
 
 # wm
 exec bspwm

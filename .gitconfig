@@ -4,4 +4,6 @@
 [core]
 	editor = vim
 [pull]
-	ff = true
+	ff = only
+[init]
+	defaultBranch = master

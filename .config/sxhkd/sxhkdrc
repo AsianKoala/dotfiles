@@ -227,3 +227,5 @@ super + Prior
 super + Home
   mpc single
   
+super + e
+  pcmanfm 

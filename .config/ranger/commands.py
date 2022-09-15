@@ -61,8 +61,8 @@ class my_edit(Command):
         # content of the current directory.
         return self._tab_directory_content()
 
-def run_cmd(command: Command, cmd, filename, post_cmd=''):
-    command.fm.run("{} '{}' {} &".format(cmd, filename, post_cmd))
+def run_cmd(command: Command, cmd, filename='', post_cmd=''):
+    command.fm.run('{} "{}" {} &'.format(cmd, filename, post_cmd))
 
 class setbg(Command):
 
@@ -119,6 +119,21 @@ class wal(Command):
 
         self.fm.notify("Set pywal theme")
 
+class osuhelper(Command):
+
+    def execute(self):
+        if self.arg(1):
+            target_filename = self.rest(1)
+        else:
+            target_filename = self.fm.thisfile.path
+
+        if not os.path.exists(target_filename):
+            self.fm.notify("The given file does not exist!", bad=True)
+            return
+
+        run_cmd(self, "$HOME/scripts/osuhelper.sh")
+
+        self.fm.notify("Created osu skin directory")
 
 
 

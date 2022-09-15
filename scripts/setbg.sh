@@ -5,4 +5,4 @@
 # feh --bg-fill  '/home/neil/pictures/wallpapers/4277598_with_some_exposure.jpg'
 # feh --bg-fill '/home/neil/documents/projects/kmeans_image_clustering/generated/4277598_with_some_exposure/4277598_with_some_exposure-kmeans-5.png'
 # feh --bg-fill '/home/neil/pictures/anime/wallpapers/train.png'
-feh --bg-fill '/home/neil/pictures/anime/wallpapers/88876556_exposure.png'
+feh --bg-fill '/home/neil/pictures/anime/wallpapers/1618969900756_with_exposure.jpg'

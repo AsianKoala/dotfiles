@@ -39,11 +39,24 @@ alias bonsai='cbonsai -liw 10 -m "こんばんは ニール！"'
 alias matrix='unimatrix -s 96 -l k -c magenta'
 alias xev='~/scripts/xev.sh'
 alias configrm="config rm --cached -rf"
+alias osuskin="$HOME/scripts/osuskin.sh"
 
 function mkc() {
   mkdir $1 
   cd $1 
 }
+
+# function osuskin() {
+#   filename=$(basename -- "$1")
+#   relativename=$filename
+#   filename="${filename%.*}"
+#   mkdir ./$filename
+#   mv ./$relativename ./$filename
+#   cd ./$filename
+#   7z x ./$relativename
+#   rm ./$relativename
+#   cd ..
+# }
 
 (cat $HOME/.cache/wal/sequences &)
 
