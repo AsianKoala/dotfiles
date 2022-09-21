@@ -14,3 +14,5 @@ bspc rule -a 'OpenTabletDriver.UX.Gtk' state=floating
 bspc rule -a 'Thunderbird' state=floating
 bspc rule -a 'matplotlib' state=floating
 bspc rule -a 'Thunar' state=floating
+bspc rule -a 'Pcmanfm' state=floating
+bspc rule -a kitty:R state=floating

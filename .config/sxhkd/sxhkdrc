@@ -170,16 +170,16 @@ super + ctrl + shift + space
 #	;bspwm_dynamic_desktops {--df,--ns} {0,1-9,10,11,12}
 
 #focus or send to the given desktop
-super + {_,shift + }{grave,asciicircum,1-9,0,ssharp,minus,equal,acute}
-	bspc {desktop -f,node -d} {0,0,1-9,10,11,11,12,12}
+super + {_,shift + }{grave,asciicircum,1-9}
+	bspc {desktop -f,node -d} {0,0,1-9}
 
 #swap desktops
-super + ctrl + {grave,asciicircum,1-9,0,ssharp,minus,equal,acute}
-	bspc desktop -s {0,0,1-9,10,11,11,12,12} --follow
+super + ctrl + {grave,asciicircum,1-9
+	bspc desktop -s {0,0,1-9} --follow
 
 #send focused desktop to the monitor of target desktop
-super + ctrl + shift + {grave,asciicircum,1-9,0,ssharp,minus,equal,acute}
-	bspc desktop -m `bspc query -M -d {0,0,1-9,10,11,11,12,12} --names` --follow
+super + ctrl + shift + {grave,asciicircum,1-9}
+	bspc desktop -m `bspc query -M -d {0,0,1-9} --names` --follow
 
 #send focused desktop to next/previous/{dir} monitor
 super + ctrl + shift + {n,p,h,j,k,l}
@@ -229,3 +229,13 @@ super + Home
   
 super + e
   pcmanfm 
+
+super + {minus,equal}
+	bspc config window_gap $((`bspc config -d focused window_gap` {-,+} 2 ))
+
+
+super + shift + equal
+  $HOME/scripts/bspwminc.sh
+
+super + shift + minus
+  $HOME/scripts/bspwmdec.sh

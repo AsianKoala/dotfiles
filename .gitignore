@@ -35,3 +35,16 @@
 .config/wal-discord/
 .config/QtProject.conf
 .config/pavucontrol.ini
+.config/Joplin/
+.config/Android Open Source Project/
+.config/Thunar/
+.config/configstore/
+.config/draw.io/
+.config/gentoo/
+.config/joplin-desktop/
+.config/kde.org/
+.config/xfce4/
+.config/xournalpp/
+.config/mimeapps.list
+.config/pcmanfm
+.config/libfm

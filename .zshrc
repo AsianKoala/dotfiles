@@ -1,11 +1,11 @@
 export PATH="/home/neil/.local/bin:$PATH"
-
 export ZSH="$HOME/.oh-my-zsh"
 
 #ZSH_THEME="powerlevel10k/powerlevel10k"
 ZSH_THEME="minimal"
 
 zstyle ':omz:update' mode disabled
+zmodload zsh/zprof
 
 plugins=(
 	git
@@ -40,11 +40,23 @@ alias matrix='unimatrix -s 96 -l k -c magenta'
 alias xev='~/scripts/xev.sh'
 alias configrm="config rm --cached -rf"
 alias osuskin="$HOME/scripts/osuskin.sh"
+alias fileman="pcmanfm > /dev/null 2>&1"
+alias hss="hugo server --noHTTPCache"
 
-function mkc() {
+mkc() {
   mkdir $1 
   cd $1 
 }
+
+fay() {
+	packages=$(awk {'print $1'} <<< $(yay -Ss $1 | awk 'NR%2 {printf "\033[1;32m%s \033[0;36m%s\033[0m — ",$1,$2;next;}{ print substr($0, 5, length($0) - 4); }' | fzf -m --ansi))
+	[ "$packages" ] && yay -S $(echo "$packages" | tr "\n" " ")
+}
+
+pay()  {
+  yay -Slq | fzf -m --preview $'(cat (yay -Si "{1}") (yay -Fl {1} | awk \"{print \$2}\" )' | xargs -ro yay -S
+}
+
 
 # function osuskin() {
 #   filename=$(basename -- "$1")
@@ -82,3 +94,4 @@ export AWT_TOOLKIT=MToolkit
 if [[ -n $SSH_CONNECTION ]] ; then
     neofetch
 fi
+
