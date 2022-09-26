@@ -58,18 +58,6 @@ pay()  {
 }
 
 
-# function osuskin() {
-#   filename=$(basename -- "$1")
-#   relativename=$filename
-#   filename="${filename%.*}"
-#   mkdir ./$filename
-#   mv ./$relativename ./$filename
-#   cd ./$filename
-#   7z x ./$relativename
-#   rm ./$relativename
-#   cd ..
-# }
-
 (cat $HOME/.cache/wal/sequences &)
 
 source $HOME/.cache/wal/colors-tty.sh
@@ -83,12 +71,8 @@ export PATH=$PATH:/opt/gradle/gradle-7.4.2/bin
 export XDG_CONFIG_HOME="$HOME/.config"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export AWT_TOOLKIT=MToolkit
-# export GTK_IM_MODULE=fcitx
-# export QT_IM_MODULE=fcitx
-# export XMODIFIERS=@im=fcitx
-# export GTK_IM_MODULE=fcitx
-# export XMODIFIERS=@im=fcitx
-# export QT_IM_MODULE=fcitx
+export JAVA_HOME="/usr/lib/jvm/java-11-openjdk"
+export PATH=$JAVA_HOME/bin:$PATH
 
 # sunglasses emoji (x2)
 if [[ -n $SSH_CONNECTION ]] ; then
