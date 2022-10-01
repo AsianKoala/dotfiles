@@ -49,3 +49,4 @@
 .config/pcmanfm
 .config/libfm
 .config/lutris
+.config/ranger/commands_full.py
