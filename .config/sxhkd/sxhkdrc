@@ -230,12 +230,12 @@ super + Home
 super + e
   pcmanfm 
 
-super + {minus,equal}
+super + {equal,minus}
 	bspc config window_gap $((`bspc config -d focused window_gap` {-,+} 2 ))
 
 
-super + shift + equal
+super + shift + minus
   $HOME/scripts/bspwminc.sh
 
-super + shift + minus
+super + shift + equal
   $HOME/scripts/bspwmdec.sh
