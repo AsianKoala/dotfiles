@@ -42,6 +42,9 @@ alias configrm="config rm --cached -rf"
 alias osuskin="$HOME/scripts/osuskin.sh"
 alias fileman="pcmanfm > /dev/null 2>&1"
 alias hss="hugo server --noHTTPCache"
+alias nc="ncmpcpp"
+alias notes="nvim main.tex"
+alias ys="yay -Q | grep"
 
 mkc() {
   mkdir $1 

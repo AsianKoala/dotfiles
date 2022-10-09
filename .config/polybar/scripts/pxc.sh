@@ -4,4 +4,5 @@ if echo "$devices" | grep -q "Connected: yes"; then
   ~/scripts/disconnect_pxc.sh
 else
   ~/scripts/connect_pxc.sh
+  # ~/scripts/pair_pxc.sh
 fi
