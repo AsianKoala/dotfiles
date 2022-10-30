@@ -45,6 +45,8 @@ alias hss="hugo server --noHTTPCache"
 alias nc="ncmpcpp"
 alias notes="nvim main.tex"
 alias ys="yay -Q | grep"
+alias ost="cosu-trainer auto"
+alias gdl="gallery-dl"
 
 mkc() {
   mkdir $1 
@@ -76,6 +78,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export AWT_TOOLKIT=MToolkit
 export JAVA_HOME="/usr/lib/jvm/java-11-openjdk"
 export PATH=$JAVA_HOME/bin:$PATH
+export OSU_SONG_FOLDER=/home/neil/games/osu/Songs
 
 # sunglasses emoji (x2)
 if [[ -n $SSH_CONNECTION ]] ; then

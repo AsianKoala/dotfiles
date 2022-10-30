@@ -32,6 +32,7 @@ export XMODIFIERS=@im=fcitx
 # autostart
 $HOME/.screenlayout/triple_fixed.sh
 (sleep 10; $HOME/scripts/xautostart.sh) &
+(sleep 10; systemctl --user restart pipewire-pulse.service)
 
 # wm
 exec bspwm
