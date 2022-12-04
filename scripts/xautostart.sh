@@ -1,6 +1,5 @@
 #!/bin/sh
-xsetroot -cursor_name left_ptr 
-xset m 0 0 
+xsetroot -cursor_name left_ptr
+xset m 0 0
 xset s off -dpms
-xset r rate 240 60 
-setxkbmap -option caps:swapescape
+xset r rate 240 60
