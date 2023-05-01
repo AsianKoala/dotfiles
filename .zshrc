@@ -47,6 +47,7 @@ alias notes="nvim main.tex"
 alias ys="yay -Q | grep"
 alias ost="cosu-trainer auto"
 alias gdl="gallery-dl"
+alias rm="rm -i"
 
 mkc() {
   mkdir $1 

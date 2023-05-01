@@ -3,6 +3,6 @@ devices=`bluetoothctl devices | cut -f2 -d' ' | while read uuid; do bluetoothctl
 if echo "$devices" | grep -q "Connected: yes"; then
   ~/scripts/disconnect_pxc.sh
 else
-  ~/scripts/connect_pxc.sh
-  # ~/scripts/pair_pxc.sh
+  # ~/scripts/connect_pxc.sh
+  ~/scripts/pair_pxc.sh
 fi

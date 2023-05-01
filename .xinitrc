@@ -31,14 +31,15 @@ export XMODIFIERS=@im=fcitx
 
 # autostart
 $HOME/.screenlayout/triple_fixed.sh
+
+sleep 2
+
 xsetroot -cursor_name left_ptr 
 xset m 0 0 
 xset s off -dpms
 xset r rate 240 60 
 xmodmap ~/.Xmodmap
-
-sleep 2
-# (sleep 10; systemctl --user restart pipewire-pulse.service) &
+(sleep 2 && systemctl --user restart pipewire-pulse.service) &
 
 # wm
 exec bspwm

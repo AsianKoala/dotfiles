@@ -10,6 +10,7 @@ bspc monitor HDMI-0 -d 2 5 8
 bspc monitor DP-4   -d 1 4 7
 bspc monitor DP-2   -d 3 6 9
 
+
 bspc config window_gap          15
 
 bspc config top_padding 50
@@ -39,5 +40,5 @@ bspc config pointer_follows_focus true
 bspc config pointer_follows_monitor true
 
 ~/.config/bspwm/windowrules.sh 
-~/.config/bspwm/autostart.sh 
+~/.config/bspwm/autostart.sh
 # ~/.config/bspwm/2bspwm

@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + @space
-  rofi -modi drun,run -show drun	
+  rofi -modi drun,run -show drun -no-history -matching prefix -drun-match-fields name -no-tokenize 
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -170,20 +170,24 @@ super + ctrl + shift + space
 #	;bspwm_dynamic_desktops {--df,--ns} {0,1-9,10,11,12}
 
 #focus or send to the given desktop
-super + {_,shift + }{grave,asciicircum,1-9}
-	bspc {desktop -f,node -d} {0,0,1-9}
+
+super + {_,shift + }{1-9}
+	bspc {desktop -f,node -d} {1,2,3,4,5,6,7,8,9}
+
+# super + shift + 6
+#   bspc node -d 6
 
 #swap desktops
-super + ctrl + {grave,asciicircum,1-9
-	bspc desktop -s {0,0,1-9} --follow
+# super + ctrl + {grave,asciicircum,1-9
+# 	bspc desktop -s {0,0,1-9} --follow
 
-#send focused desktop to the monitor of target desktop
-super + ctrl + shift + {grave,asciicircum,1-9}
-	bspc desktop -m `bspc query -M -d {0,0,1-9} --names` --follow
-
-#send focused desktop to next/previous/{dir} monitor
-super + ctrl + shift + {n,p,h,j,k,l}
-	bspc desktop -m {next,prev,west,south,north,east} --follow
+# # send focused desktop to the monitor of target desktop
+# super + ctrl + shift + {grave,asciicircum,1-9}
+# 	bspc desktop -m `bspc query -M -d {0,0,1-9} --names` --follow
+#
+# #send focused desktop to next/previous/{dir} monitor
+# super + ctrl + shift + {n,p,h,j,k,l}
+# 	bspc desktop -m {next,prev,west,south,north,east} --follow
 
 
 
@@ -202,11 +206,11 @@ super + c
 super + period 
   rofi -modi emoji -show emoji -kb-custom-1 Ctrl+C
 
-super + Print
+super + Pause
   pkill picom &
 
-super + Pause
-  picom --experimental-backend &
+super + Print
+  picom --experimental-backend --refresh-rate 144 --xrender-sync-fence &
 
 # mpd 
 super + Delete
@@ -239,3 +243,6 @@ super + shift + minus
 
 super + shift + equal
   $HOME/scripts/bspwmdec.sh
+
+F12
+  $HOME/scripts/hide.sh
