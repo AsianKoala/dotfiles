@@ -32,6 +32,9 @@ export XMODIFIERS=@im=fcitx
 # autostart
 $HOME/.screenlayout/triple_fixed.sh
 
+# fuck you nvidia
+export LIBVA_DRIVER_NAME=nvidia
+
 sleep 2
 
 xsetroot -cursor_name left_ptr 
@@ -39,6 +42,8 @@ xset m 0 0
 xset s off -dpms
 xset r rate 240 60 
 xmodmap ~/.Xmodmap
+mpd &
+betterdiscordctl -f canary install &
 (sleep 2 && systemctl --user restart pipewire-pulse.service) &
 
 # wm

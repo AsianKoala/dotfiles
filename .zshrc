@@ -32,7 +32,8 @@ alias vim='nvim'
 alias vi='nvim'
 alias setbg="feh --bg-fill"
 alias cpick="colorpicker --one-shot"
-alias ytaudio="yt-dlp -f 'ba' -x --no-playlist"
+# alias ytaudio="yt-dlp -f 'ba' -x --no-playlist"
+alias ytaudio="$HOME/scripts/ytaudio.sh"
 alias ytplaylist="yt-dlp -f 'ba' -x"
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias bonsai='cbonsai -liw 10 -m "こんばんは ニール！"'
@@ -48,10 +49,24 @@ alias ys="yay -Q | grep"
 alias ost="cosu-trainer auto"
 alias gdl="gallery-dl"
 alias rm="rm -i"
+alias yt="$HOME/scripts/yt.sh"
+alias ks="py $HOME/documents/projects/ksfancam-archiver/main.py"
+alias svim="sudo -e"
+alias dcx="py $HOME/scripts/dcx.py"
+alias mount="sudo mount /data/windows"
+alias cddq="cd ~/documents/projects/deepquarry/backend/ && source ~/documents/projects/deepquarry/backend/.venv/bin/activate"
+alias xauto="~/scripts/xautostart.sh"
 
 mkc() {
   mkdir $1 
   cd $1 
+}
+
+cpm() {
+  mkdir $1
+  cd $1
+  touch main.cpp
+  nvim main.cpp
 }
 
 fay() {
@@ -63,6 +78,21 @@ pay()  {
   yay -Slq | fzf -m --preview $'(cat (yay -Si "{1}") (yay -Fl {1} | awk \"{print \$2}\" )' | xargs -ro yay -S
 }
 
+imgurdl() {
+  nohup /home/neil/documents/projects/cache-archiver/.venv/bin/python3 main.py $1 > /home/neil/documents/projects/cache-archiver/app/scrapers/logfiles/$1 &
+}
+
+gdlsub() {
+  gallery-dl --no-download -j https://www.reddit.com/r/$1 > $1
+}
+
+yt-cache-dl() {
+  python3 $HOME/documents/projects/yt-cache-dl/main.py $1
+}
+
+nohup-audio() {
+  nohup $HOME/scripts/ytaudio.sh $1 &!
+}
 
 (cat $HOME/.cache/wal/sequences &)
 
@@ -72,7 +102,9 @@ export RANGER_LOAD_DEFAULT_RC=false
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 export PATH="$PATH:$GEM_HOME/bin"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-export EDITOR=/usr/bin/nvim
+export VISUAL=/usr/bin/nvim
+export GIT_EDITOR="$VISUAL"
+export EDITOR="$VISUAL"
 export PATH=$PATH:/opt/gradle/gradle-7.4.2/bin
 export XDG_CONFIG_HOME="$HOME/.config"
 export _JAVA_AWT_WM_NONREPARENTING=1
