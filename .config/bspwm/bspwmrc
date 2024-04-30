@@ -4,11 +4,13 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspc rule -r "*"
 
-bspc wm -O HDMI-0 DP-4 DP-2
+bspc wm -O DP-4 
 
-bspc monitor HDMI-0 -d 2 5 8 
-bspc monitor DP-4   -d 1 4 7
-bspc monitor DP-2   -d 3 6 9
+bspc monitor DP-4 -d 1 2 3 4 5
+bspc monitor DP-2 -d 6 7 8 9 10
+
+# bspc wm -O DP-5
+# bspc monitor DP-5 -d 1 2 3 4 5 6 7 8 9 10
 
 
 bspc config window_gap          15

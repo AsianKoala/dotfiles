@@ -50,3 +50,9 @@
 .config/libfm
 .config/lutris
 .config/ranger/commands_full.py
+.config/Todoist
+.config/Postman
+.config/chromium
+.config/discordcanary
+.config/sqlectron
+.config/gallery-dl

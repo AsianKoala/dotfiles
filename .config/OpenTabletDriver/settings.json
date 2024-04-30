@@ -61,17 +61,17 @@
       ],
       "AbsoluteModeSettings": {
         "Display": {
-          "Width": 2559.0,
+          "Width": 2560.0,
           "Height": 1440.0,
-          "X": 3201.0,
-          "Y": 958.0,
+          "X": 1280.0,
+          "Y": 720.0,
           "Rotation": 0.0
         },
         "Tablet": {
-          "Width": 75.0,
-          "Height": 50.0,
-          "X": 37.5,
-          "Y": 25.0,
+          "Width": 72.0,
+          "Height": 48.0,
+          "X": 36.0,
+          "Y": 24.0,
           "Rotation": 0.0
         },
         "EnableClipping": true,

@@ -53,9 +53,12 @@ alias yt="$HOME/scripts/yt.sh"
 alias ks="py $HOME/documents/projects/ksfancam-archiver/main.py"
 alias svim="sudo -e"
 alias dcx="py $HOME/scripts/dcx.py"
-alias mount="sudo mount /data/windows"
+alias mwin="sudo mount /data/windows"
 alias cddq="cd ~/documents/projects/deepquarry/backend/ && source ~/documents/projects/deepquarry/backend/.venv/bin/activate"
 alias xauto="~/scripts/xautostart.sh"
+alias resetswap="sudo swapoff -a && sudo swapon -a"
+alias hgr="history | grep"
+alias up="cd .."
 
 mkc() {
   mkdir $1 
@@ -94,13 +97,29 @@ nohup-audio() {
   nohup $HOME/scripts/ytaudio.sh $1 &!
 }
 
+nohupyt() {
+  nohup $HOME/scripts/yt.sh $1 &!
+}
+
+yta() {
+  nohup $HOME/scripts/ytarchive.sh $1 &!
+}
+
+rea() {
+  nohup $HOME/scripts/rearchive.sh $1 &!
+}
+
+merge() {
+  rsync -rhavzP --ignore-existing $1 $2
+}
+
 (cat $HOME/.cache/wal/sequences &)
 
 source $HOME/.cache/wal/colors-tty.sh
 
 export RANGER_LOAD_DEFAULT_RC=false
-export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
-export PATH="$PATH:$GEM_HOME/bin"
+# export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+# export PATH="$PATH:$GEM_HOME/bin"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export VISUAL=/usr/bin/nvim
 export GIT_EDITOR="$VISUAL"
@@ -113,8 +132,15 @@ export JAVA_HOME="/usr/lib/jvm/java-11-openjdk"
 export PATH=$JAVA_HOME/bin:$PATH
 export OSU_SONG_FOLDER=/home/neil/games/osu/Songs
 
+source $HOME/.rvm/scripts/rvm
+
+bindkey -s '^Z' 'fg\n'
+
 # sunglasses emoji (x2)
 if [[ -n $SSH_CONNECTION ]] ; then
     neofetch
 fi
 
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

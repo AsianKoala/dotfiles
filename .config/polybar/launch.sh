@@ -6,6 +6,8 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch the bar
-polybar -q center -c ~/.config/polybar/config.ini &
-polybar -q left -c   ~/.config/polybar/config.ini &
+# polybar -q center -c ~/.config/polybar/config.ini &
+# polybar -q left -c   ~/.config/polybar/config.ini &
 polybar -q right -c  ~/.config/polybar/config.ini &
+
+polybar -q center -c ~/.config/polybar/config.ini &

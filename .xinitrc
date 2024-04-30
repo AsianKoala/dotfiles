@@ -30,7 +30,8 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
 # autostart
-$HOME/.screenlayout/triple_fixed.sh
+$HOME/.screenlayout/college.sh
+# $HOME/.screenlayout/single_home.sh
 
 # fuck you nvidia
 export LIBVA_DRIVER_NAME=nvidia

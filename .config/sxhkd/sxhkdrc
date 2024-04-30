@@ -19,7 +19,7 @@ super + Escape
 #
 
 # quit/restart bspwm
-super + shift + {q,r}
+super + ctrl + shift + {q,r}
 	bspc {quit,wm -r}
 
 # close and kill
@@ -34,9 +34,13 @@ super + m
 super + y
 	bspc node newest.marked.local -n newest.!automatic.local
 
-# swap the current node and the biggest window
+# # swap the current node and the biggest window
+# super + g
+# 	bspc node -s biggest.window
+
+# swap with last
 super + g
-	bspc node -s biggest.window
+	bspc node -s last
 
 #
 # state/flags
@@ -198,7 +202,7 @@ super + Scroll_Lock
   betterlockscreen -l dimblur --display 1
 
 super + b
-  firefox
+  google-chrome-stable
 
 super + c 
   clipster -sc
@@ -212,7 +216,6 @@ super + Pause
 super + Print
   picom --experimental-backend --refresh-rate 144 --xrender-sync-fence &
 
-# mpd 
 super + Delete
   mpc volume -1
 
@@ -230,7 +233,25 @@ super + Prior
 
 super + Home
   mpc single
-  
+
+XF86AudioPlay
+  mpc toggle
+
+XF86AudioPrev
+  mpc prev
+
+XF86AudioNext
+  mpc next
+
+XF86AudioRewind
+  mpc single
+
+XF86AudioRaiseVolume
+  mpc volume +1
+
+XF86AudioLowerVolume
+  mpc volume -1
+
 super + e
   pcmanfm 
 
@@ -244,5 +265,11 @@ super + shift + minus
 super + shift + equal
   $HOME/scripts/bspwmdec.sh
 
-F12
-  $HOME/scripts/hide.sh
+# F12
+#   $HOME/scripts/hide.sh
+
+super + z
+  setxkbmap us -variant colemak_dh
+
+super + x
+  setxkbmap us
