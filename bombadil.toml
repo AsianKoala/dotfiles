@@ -34,12 +34,12 @@ sxhkd = { source = "sxhkd", target = ".config/sxhkd" }
 wal = { source = "wal", target = ".config/wal" }
 zathura = { source = "zathura", target = ".config/zathura" }
 
+# nvim = { source = "nvim", target = ".config/nvim" }
+
 betterlockscreen = { source = "betterlockscreenrc", target = ".config/betterlockscreenrc" }
 picom = { source = "picom.conf", target = ".config/picom.conf" }
 xdg = { source = "user-dirs.dirs", target = ".config/user-dirs.dirs" }
 screenlayout = { source = "screenlayout", target = ".screenlayout" }
-
-# gtkthemes = { source = "themes", target = ".themes" }
 
 cpxc = { source = "scripts/connect_pxc.sh", target = "scripts/connect_pxc.sh" }
 dpxc = { source = "scripts/disconnect_pxc.sh", target = "scripts/disconnect_pxc.sh" }
