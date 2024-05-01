@@ -1,0 +1,56 @@
+# {dotfiles}/bombadil.toml
+
+# Path to your dotfiles relative to your $HOME directory
+dotfiles_dir = "sources/dotfiles"
+
+[settings]
+# An array of toml files paths containing the variables to inject in your templatized dotfiles
+# You can have multiple var files as long as variable names does not colide.
+
+# An array of post install shell commands
+posthooks = [ "bspc wm -r" ]
+
+[settings.dots]
+
+# A dot entry representing a symlink, `source` is relative to `dotfiles_dir`
+# and `target` shall be relative to $HOME directory or absolute.
+alacritty = { source = "alacritty", target = ".config/alacritty" }
+betterdiscord = { source = "BetterDiscord", target = ".config/BetterDiscord" }
+bspwm = { source = "bspwm", target = ".config/bspwm" }
+flameshot = { source = "flameshot", target = ".config/flameshot" }
+fontconfig = { source = "fontconfig", target = ".config/fontconfig" }
+gotop = { source = "gotop", target = ".config/gotop" }
+gtk3 = { source = "gtk-3.0", target = ".config/gtk-3.0" }
+kitty = { source = "kitty", target = ".config/kitty" }
+mpd = { source = "mpd", target = ".config/mpd" }
+mpv = { source = "mpv", target = ".config/mpv" }
+ncmpcpp = { source = "ncmpcpp", target = ".config/ncmpcpp" }
+neofetch = { source = "neofetch", target = ".config/neofetch" }
+polybar = { source = "polybar", target = ".config/polybar" }
+ranger = { source = "ranger", target = ".config/ranger" }
+redshift = { source = "redshift", target = ".config/redshift" }
+rofi = { source = "rofi", target = ".config/rofi" }
+sxhkd = { source = "sxhkd", target = ".config/sxhkd" }
+wal = { source = "wal", target = ".config/wal" }
+zathura = { source = "zathura", target = ".config/zathura" }
+
+betterlockscreen = { source = "betterlockscreenrc", target = ".config/betterlockscreenrc" }
+picom = { source = "picom.conf", target = ".config/picom.conf" }
+xdg = { source = "user-dirs.dirs", target = ".config/user-dirs.dirs" }
+screenlayout = { source = "screenlayout", target = ".screenlayout" }
+
+cpxc = { source = "scripts/connect_pxc.sh", target = "scripts/connect_pxc.sh" }
+dpxc = { source = "scripts/disconnect_pxc.sh", target = "scripts/disconnect_pxc.sh" }
+osh = { source = "scripts/osuhelper.sh", target = "scripts/osuhelper.sh" }
+ppxc = { source = "scripts/pair_pxc.sh", target = "scripts/pair_pxc.sh" }
+setbg = { source = "scripts/setbg.sh", target = "scripts/setbg.sh" }
+xauto = { source = "scripts/xautostart.sh", target = "scripts/xautostart.sh" }
+xev = { source = "scripts/xev.sh", target = "scripts/xev.sh" }
+
+gitconfig = { source = ".gitconfig", target = ".gitconfig" }
+gtk2 = { source = ".gtkrc-2.0", target = ".gtkrc-2.0" }
+xinitrc = { source = ".xinitrc", target = ".xinitrc" }
+xmodmap = { source = ".Xmodmap", target = ".Xmodmap" }
+zprofile = { source = ".zprofile", target = ".zprofile" }
+zshrc = { source = ".zshrc", target = ".zshrc" }
+
