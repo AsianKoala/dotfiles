@@ -39,13 +39,21 @@ picom = { source = "picom.conf", target = ".config/picom.conf" }
 xdg = { source = "user-dirs.dirs", target = ".config/user-dirs.dirs" }
 screenlayout = { source = "screenlayout", target = ".screenlayout" }
 
+# gtkthemes = { source = "themes", target = ".themes" }
+
 cpxc = { source = "scripts/connect_pxc.sh", target = "scripts/connect_pxc.sh" }
 dpxc = { source = "scripts/disconnect_pxc.sh", target = "scripts/disconnect_pxc.sh" }
 osh = { source = "scripts/osuhelper.sh", target = "scripts/osuhelper.sh" }
 ppxc = { source = "scripts/pair_pxc.sh", target = "scripts/pair_pxc.sh" }
+pyps = { source = "scripts/pyps.sh", target = "scripts/pyps.sh" }
+rea = { source = "scripts/rearchive.sh", target = "scripts/rearchive.sh" }
 setbg = { source = "scripts/setbg.sh", target = "scripts/setbg.sh" }
 xauto = { source = "scripts/xautostart.sh", target = "scripts/xautostart.sh" }
 xev = { source = "scripts/xev.sh", target = "scripts/xev.sh" }
+ycmd = { source = "scripts/ycmd.sh", target = "scripts/ycmd.sh" }
+yt = { source = "scripts/yt.sh", target = "scripts/yt.sh" }
+ytarchive = { source = "scripts/ytarchive.sh", target = "scripts/ytarchive.sh" }
+ytaudio = { source = "scripts/ytaudio.sh", target = "scripts/ytaudio.sh" }
 
 gitconfig = { source = ".gitconfig", target = ".gitconfig" }
 gtk2 = { source = ".gtkrc-2.0", target = ".gtkrc-2.0" }

@@ -31,10 +31,8 @@ alias setbg="feh --bg-fill"
 alias cpick="colorpicker --one-shot"
 # alias ytaudio="yt-dlp -f 'ba' -x --no-playlist"
 alias ytaudio="$HOME/scripts/ytaudio.sh"
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias bonsai='cbonsai -liw 10 -m "こんばんは ニール！"'
 alias xev='~/scripts/xev.sh'
-alias configrm="config rm --cached -rf"
 alias fileman="pcmanfm > /dev/null 2>&1"
 alias nc="ncmpcpp"
 alias gdl="gallery-dl"
@@ -76,8 +74,6 @@ export EDITOR="$VISUAL"
 export XDG_CONFIG_HOME="$HOME/.config"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export AWT_TOOLKIT=MToolkit
-export JAVA_HOME="/usr/lib/jvm/java-11-openjdk"
-export PATH=$JAVA_HOME/bin:$PATH
 export OSU_SONG_FOLDER=/home/neil/games/osu/Songs
 
 source $HOME/.rvm/scripts/rvm
