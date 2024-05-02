@@ -19,7 +19,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 
-alias ranger="cat /home/neil/.cache/wal/sequences && ranger"
+alias ranger="cat /home/neil/dotfiles/wal/backup/sequences && ranger"
 alias ls='exa --icons'
 alias py='python3'
 alias icat="kitty +kitten icat --scale-up"
@@ -62,9 +62,9 @@ rea() {
   nohup $HOME/scripts/rearchive.sh $1 &!
 }
 
-(cat $HOME/.cache/wal/sequences &)
+(cat {{ wal }}/sequences &)
 
-source $HOME/.cache/wal/colors-tty.sh
+source {{ wal }}/colors-tty.sh
 
 export RANGER_LOAD_DEFAULT_RC=false
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"

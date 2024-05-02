@@ -1,7 +1,7 @@
 # {dotfiles}/bombadil.toml
 
 # Path to your dotfiles relative to your $HOME directory
-dotfiles_dir = "sources/dotfiles"
+dotfiles_dir = "dotfiles"
 
 [settings]
 # An array of toml files paths containing the variables to inject in your templatized dotfiles
@@ -54,7 +54,6 @@ posthooks = [ "bspc wm -r" ]
 
 [profiles.bspwm.dots]
 bspwm = { source = "bspwm", target = ".config/bspwm" }
-flameshot = { source = "flameshot", target = ".config/flameshot" }
 polybar = { source = "polybar", target = ".config/polybar" }
 rofi = { source = "rofi", target = ".config/rofi" }
 sxhkd = { source = "sxhkd", target = ".config/sxhkd" }
