@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/neil/Pictures/kogecha_kmeans.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#0e1c24",
+        "foreground": "#e1d4cb",
+        "cursor": "#e1d4cb"
+    },
+    "colors": {
+        "color0": "#0e1c24",
+        "color1": "#84877D",
+        "color2": "#7E8580",
+        "color3": "#989A8C",
+        "color4": "#A89E93",
+        "color5": "#9EA192",
+        "color6": "#A5A494",
+        "color7": "#e1d4cb",
+        "color8": "#9d948e",
+        "color9": "#84877D",
+        "color10": "#7E8580",
+        "color11": "#989A8C",
+        "color12": "#A89E93",
+        "color13": "#9EA192",
+        "color14": "#A5A494",
+        "color15": "#e1d4cb"
+    }
+}

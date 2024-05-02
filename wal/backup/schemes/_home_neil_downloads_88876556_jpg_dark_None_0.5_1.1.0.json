@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/neil/downloads/88876556.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#0b0822",
+        "foreground": "#e8ddd1",
+        "cursor": "#e8ddd1"
+    },
+    "colors": {
+        "color0": "#0b0822",
+        "color1": "#6f2b83",
+        "color2": "#a5374e",
+        "color3": "#9e3462",
+        "color4": "#ab389d",
+        "color5": "#ce6c9b",
+        "color6": "#4e92c3",
+        "color7": "#e8ddd1",
+        "color8": "#a29a92",
+        "color9": "#6f2b83",
+        "color10": "#a5374e",
+        "color11": "#9e3462",
+        "color12": "#ab389d",
+        "color13": "#ce6c9b",
+        "color14": "#4e92c3",
+        "color15": "#e8ddd1"
+    }
+}

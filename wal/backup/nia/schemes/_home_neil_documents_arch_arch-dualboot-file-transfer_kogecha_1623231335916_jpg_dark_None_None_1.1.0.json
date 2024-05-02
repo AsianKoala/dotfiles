@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/neil/documents/arch/arch-dualboot-file-transfer/kogecha/1623231335916.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#0A1129",
+        "foreground": "#e5cdbe",
+        "cursor": "#e5cdbe"
+    },
+    "colors": {
+        "color0": "#0A1129",
+        "color1": "#D39268",
+        "color2": "#0A3B98",
+        "color3": "#1F4F9B",
+        "color4": "#0A49AE",
+        "color5": "#426AAD",
+        "color6": "#7192CF",
+        "color7": "#e5cdbe",
+        "color8": "#a08f85",
+        "color9": "#D39268",
+        "color10": "#0A3B98",
+        "color11": "#1F4F9B",
+        "color12": "#0A49AE",
+        "color13": "#426AAD",
+        "color14": "#7192CF",
+        "color15": "#e5cdbe"
+    }
+}

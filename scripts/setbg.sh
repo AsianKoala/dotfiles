@@ -11,4 +11,5 @@
 # feh --bg-fill '/home/neil/downloads/fuji.jpg'
 # feh --bg-fill '/home/neil/downloads/Desktop Wallpaper Tower.jpg'
 # feh --bg-fill '/home/neil/downloads/pmxrh3o9rdgb1.png'
-feh --bg-fill '/home/neil/pictures/gimp/icpcbg.png'
+# feh --bg-fill '/home/neil/pictures/gimp/icpcbg.png'
+feh --bg-fill {{wallpaper}}

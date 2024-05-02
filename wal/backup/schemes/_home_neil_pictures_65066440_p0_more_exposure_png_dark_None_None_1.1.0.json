@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/neil/pictures/65066440_p0_more_exposure.png",
+    "alpha": "100",
+    "special": {
+        "background": "#0b0209",
+        "foreground": "#959799",
+        "cursor": "#959799"
+    },
+    "colors": {
+        "color0": "#0b0209",
+        "color1": "#423B35",
+        "color2": "#3E403F",
+        "color3": "#45413A",
+        "color4": "#1B3040",
+        "color5": "#333A42",
+        "color6": "#413F41",
+        "color7": "#959799",
+        "color8": "#68696b",
+        "color9": "#423B35",
+        "color10": "#3E403F",
+        "color11": "#45413A",
+        "color12": "#1B3040",
+        "color13": "#333A42",
+        "color14": "#413F41",
+        "color15": "#959799"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/neil/pictures/anime/wallpapers/88876556.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#0b0822",
+        "foreground": "#e8ddd1",
+        "cursor": "#e8ddd1"
+    },
+    "colors": {
+        "color0": "#0b0822",
+        "color1": "#5F4A65",
+        "color2": "#A9344D",
+        "color3": "#8B4865",
+        "color4": "#93518B",
+        "color5": "#E4579B",
+        "color6": "#698EA9",
+        "color7": "#e8ddd1",
+        "color8": "#a29a92",
+        "color9": "#5F4A65",
+        "color10": "#A9344D",
+        "color11": "#8B4865",
+        "color12": "#93518B",
+        "color13": "#E4579B",
+        "color14": "#698EA9",
+        "color15": "#e8ddd1"
+    }
+}

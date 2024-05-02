@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/neil/downloads/__hatsune_miku_vocaloid_drawn_by_hua_ben_wuming__6514b1cd818821361a4b03091b118be9.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#05061B",
+        "foreground": "#a1a5db",
+        "cursor": "#a1a5db"
+    },
+    "colors": {
+        "color0": "#05061B",
+        "color1": "#1f2cb1",
+        "color2": "#331fb2",
+        "color3": "#2233c4",
+        "color4": "#3d27d9",
+        "color5": "#262ed7",
+        "color6": "#274ad9",
+        "color7": "#a1a5db",
+        "color8": "#707399",
+        "color9": "#1f2cb1",
+        "color10": "#331fb2",
+        "color11": "#2233c4",
+        "color12": "#3d27d9",
+        "color13": "#262ed7",
+        "color14": "#274ad9",
+        "color15": "#a1a5db"
+    }
+}

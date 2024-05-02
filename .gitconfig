@@ -1,9 +1,0 @@
-[user]
-	email = neilmehra@outlook.com
-	name = neil mehra
-[core]
-	editor = vim
-[pull]
-	ff = only
-[init]
-	defaultBranch = master

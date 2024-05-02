@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/neil/pictures/wallpapers/4277598.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#271e2d",
+        "foreground": "#d0bae5",
+        "cursor": "#d0bae5"
+    },
+    "colors": {
+        "color0": "#271e2d",
+        "color1": "#6E62DE",
+        "color2": "#9B6AA0",
+        "color3": "#C76CAF",
+        "color4": "#9772DB",
+        "color5": "#DCAFA2",
+        "color6": "#E5A6AC",
+        "color7": "#d0bae5",
+        "color8": "#9182a0",
+        "color9": "#6E62DE",
+        "color10": "#9B6AA0",
+        "color11": "#C76CAF",
+        "color12": "#9772DB",
+        "color13": "#DCAFA2",
+        "color14": "#E5A6AC",
+        "color15": "#d0bae5"
+    }
+}

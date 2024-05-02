@@ -6,40 +6,26 @@ dotfiles_dir = "sources/dotfiles"
 [settings]
 # An array of toml files paths containing the variables to inject in your templatized dotfiles
 # You can have multiple var files as long as variable names does not colide.
-
-# An array of post install shell commands
-posthooks = [ "bspc wm -r" ]
+vars = [ "vars.toml" ]
 
 [settings.dots]
 
 # A dot entry representing a symlink, `source` is relative to `dotfiles_dir`
 # and `target` shall be relative to $HOME directory or absolute.
 alacritty = { source = "alacritty", target = ".config/alacritty" }
-betterdiscord = { source = "BetterDiscord", target = ".config/BetterDiscord" }
-bspwm = { source = "bspwm", target = ".config/bspwm" }
-flameshot = { source = "flameshot", target = ".config/flameshot" }
+betterdiscord = { source = "betterdiscord", target = ".config/BetterDiscord" }
 fontconfig = { source = "fontconfig", target = ".config/fontconfig" }
-gotop = { source = "gotop", target = ".config/gotop" }
-gtk3 = { source = "gtk-3.0", target = ".config/gtk-3.0" }
+gtk3 = { source = "gtk/gtk-3.0", target = ".config/gtk-3.0" }
 kitty = { source = "kitty", target = ".config/kitty" }
+nvim = { source = "nvim", target = ".config/nvim" }
 mpd = { source = "mpd", target = ".config/mpd" }
 mpv = { source = "mpv", target = ".config/mpv" }
 ncmpcpp = { source = "ncmpcpp", target = ".config/ncmpcpp" }
 neofetch = { source = "neofetch", target = ".config/neofetch" }
-polybar = { source = "polybar", target = ".config/polybar" }
 ranger = { source = "ranger", target = ".config/ranger" }
 redshift = { source = "redshift", target = ".config/redshift" }
-rofi = { source = "rofi", target = ".config/rofi" }
-sxhkd = { source = "sxhkd", target = ".config/sxhkd" }
 wal = { source = "wal", target = ".config/wal" }
 zathura = { source = "zathura", target = ".config/zathura" }
-
-# nvim = { source = "nvim", target = ".config/nvim" }
-
-betterlockscreen = { source = "betterlockscreenrc", target = ".config/betterlockscreenrc" }
-picom = { source = "picom.conf", target = ".config/picom.conf" }
-xdg = { source = "user-dirs.dirs", target = ".config/user-dirs.dirs" }
-screenlayout = { source = "screenlayout", target = ".screenlayout" }
 
 cpxc = { source = "scripts/connect_pxc.sh", target = "scripts/connect_pxc.sh" }
 dpxc = { source = "scripts/disconnect_pxc.sh", target = "scripts/disconnect_pxc.sh" }
@@ -55,10 +41,26 @@ yt = { source = "scripts/yt.sh", target = "scripts/yt.sh" }
 ytarchive = { source = "scripts/ytarchive.sh", target = "scripts/ytarchive.sh" }
 ytaudio = { source = "scripts/ytaudio.sh", target = "scripts/ytaudio.sh" }
 
-gitconfig = { source = ".gitconfig", target = ".gitconfig" }
-gtk2 = { source = ".gtkrc-2.0", target = ".gtkrc-2.0" }
-xinitrc = { source = ".xinitrc", target = ".xinitrc" }
-xmodmap = { source = ".Xmodmap", target = ".Xmodmap" }
-zprofile = { source = ".zprofile", target = ".zprofile" }
-zshrc = { source = ".zshrc", target = ".zshrc" }
+xdg = { source = "xdg/user-dirs.dirs", target = ".config/user-dirs.dirs" }
+gitconfig = { source = "git/.gitconfig", target = ".gitconfig" }
+gtk2 = { source = "gtk/.gtkrc-2.0", target = ".gtkrc-2.0" }
+zprofile = { source = "zsh/.zprofile", target = ".zprofile" }
+zshrc = { source = "zsh/.zshrc", target = ".zshrc" }
 
+
+[profiles.bspwm]
+
+posthooks = [ "bspc wm -r" ]
+
+[profiles.bspwm.dots]
+bspwm = { source = "bspwm", target = ".config/bspwm" }
+flameshot = { source = "flameshot", target = ".config/flameshot" }
+polybar = { source = "polybar", target = ".config/polybar" }
+rofi = { source = "rofi", target = ".config/rofi" }
+sxhkd = { source = "sxhkd", target = ".config/sxhkd" }
+
+betterlockscreen = { source = "betterlockscreen/betterlockscreenrc", target = ".config/betterlockscreenrc" }
+picom = { source = "picom/picom.conf", target = ".config/picom.conf" }
+screenlayout = { source = "screenlayout", target = ".screenlayout" }
+xinitrc = { source = "x11/.xinitrc", target = ".xinitrc" }
+xmodmap = { source = "x11/.Xmodmap", target = ".Xmodmap" }

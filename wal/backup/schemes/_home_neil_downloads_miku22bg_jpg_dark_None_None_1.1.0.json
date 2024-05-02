@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/neil/downloads/miku22bg.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#030415",
+        "foreground": "#a4a6af",
+        "cursor": "#a4a6af"
+    },
+    "colors": {
+        "color0": "#030415",
+        "color1": "#201D61",
+        "color2": "#1E2660",
+        "color3": "#282D62",
+        "color4": "#4B325F",
+        "color5": "#334A65",
+        "color6": "#4F4E69",
+        "color7": "#a4a6af",
+        "color8": "#72747a",
+        "color9": "#201D61",
+        "color10": "#1E2660",
+        "color11": "#282D62",
+        "color12": "#4B325F",
+        "color13": "#334A65",
+        "color14": "#4F4E69",
+        "color15": "#a4a6af"
+    }
+}

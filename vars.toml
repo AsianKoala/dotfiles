@@ -1,0 +1,5 @@
+wm = "bspwm"
+setup = "college"
+main_monitor = "DP-4"
+r_monitor = "DP-2" 
+wallpaper = "$HOME/sources/dotfiles/assets/wallpapers/icpcbg.png"
