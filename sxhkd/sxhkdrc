@@ -42,8 +42,8 @@ super + y
 # 	bspc node -s biggest.window
 
 # swap with last
-super + g
-	bspc node -s last
+# super + g
+# 	bspc node -s last
 
 #
 # state/flags
@@ -261,18 +261,5 @@ super + e
 super + {equal,minus}
 	bspc config window_gap $((`bspc config -d focused window_gap` {-,+} 2 ))
 
-
-super + shift + minus
-  $HOME/scripts/bspwminc.sh
-
-super + shift + equal
-  $HOME/scripts/bspwmdec.sh
-
-# F12
-#   $HOME/scripts/hide.sh
-
-super + z
-  setxkbmap us -variant colemak_dh
-
-super + x
-  setxkbmap us
+super + g
+  bombadil link -p bspwm
