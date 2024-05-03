@@ -1,2 +1,3 @@
 set statusbar-page-percent true
+set selection-clipboard clipboard
 #set guioptions none
