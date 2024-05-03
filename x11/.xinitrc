@@ -30,20 +30,18 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
 # autostart
-$HOME/.screenlayout/college.sh # arandr setup
-# $HOME/.screenlayout/single_home.sh
-
-
+{% if use_xrandr == "true" %}
+{{ xrandr_script }}
 sleep 2
+{% endif %}
 
 xsetroot -cursor_name left_ptr 
 xset m 0 0  # mouse accel
 xset s off -dpms # screensaver
 xset r rate 240 60 # keyboard rr
 xmodmap ~/.Xmodmap # swap caps/esc
+
 mpd &
-# betterdiscordctl -f canary install &
-# (sleep 2 && systemctl --user restart pipewire-pulse.service) &
 
 # wm
 exec bspwm
