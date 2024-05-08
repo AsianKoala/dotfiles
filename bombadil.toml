@@ -18,9 +18,10 @@ fontconfig = { source = "fontconfig", target = ".config/fontconfig" }
 gtk3 = { source = "gtk/gtk-3.0", target = ".config/gtk-3.0" }
 kitty = { source = "kitty", target = ".config/kitty" }
 nvim = { source = "nvim", target = ".config/nvim" }
-mpd = { source = "mpd", target = ".config/mpd" }
+mpd = { source = "mpd/mpd.conf", target = ".config/mpd/mpd.conf" }
 mpv = { source = "mpv", target = ".config/mpv" }
-ncmpcpp = { source = "ncmpcpp", target = ".config/ncmpcpp" }
+ncb = { source = "ncmpcpp/bindings", target = ".config/ncmpcpp/bindings" }
+ncc = { source = "ncmpcpp/config", target = ".config/ncmpcpp/config" }
 neofetch = { source = "neofetch", target = ".config/neofetch" }
 ranger = { source = "ranger", target = ".config/ranger" }
 redshift = { source = "redshift", target = ".config/redshift" }
