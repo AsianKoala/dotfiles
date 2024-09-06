@@ -37,7 +37,7 @@ alias fileman="pcmanfm > /dev/null 2>&1"
 alias nc="ncmpcpp"
 alias gdl="gallery-dl"
 alias rm="rm -i"
-alias yt="$HOME/scripts/yt.sh"
+alias yt="$HOME/scripts/ycmd.sh"
 alias mwin="sudo mount /data/windows"
 alias hgr="history | grep"
 alias up="cd .."
@@ -60,6 +60,10 @@ yta() {
 
 rea() {
   nohup $HOME/scripts/rearchive.sh $1 &!
+}
+
+mpall() {
+  mpv --shuffle --image-display-duration=5 --no-loop --loop-playlist *
 }
 
 (cat {{ wal }}/sequences &)

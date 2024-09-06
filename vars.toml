@@ -1,10 +1,15 @@
 wm = "bspwm"
 setup = "college"
-main_monitor = "DP-4"
-r_monitor = "DP-2" 
-l_monitor = "DP-1"
-wallpaper = "~/dotfiles/assets/wallpapers/icpcbg.png"
-wal = "~/dotfiles/wal/backup"
+
+main_monitor = "DP-2"
+l_monitor = "HDMI-0"
+r_monitor = "DP-4" 
+use_main = "true"
+use_l = "true"
+use_r = "false"
+
+wallpaper = "/home/neil/pictures/anime/wallpapers/wallpaper-low-exposure.png"
+wal = "~/.config/wal/backup"
 use_xrandr = "true"
-xrandr_script = "~/dotfiles/screenlayout/college.sh"
-using_displaycal = "false"
+xrandr_script = "~/.screenlayout/gatech.sh"
+

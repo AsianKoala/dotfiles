@@ -35,13 +35,5 @@ export XMODIFIERS=@im=fcitx
 sleep 2
 {% endif %}
 
-xsetroot -cursor_name left_ptr 
-xset m 0 0  # mouse accel
-xset s off -dpms # screensaver
-xset r rate 240 60 # keyboard rr
-xmodmap ~/.Xmodmap # swap caps/esc
-
-mpd &
-
 # wm
 exec bspwm

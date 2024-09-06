@@ -9,3 +9,4 @@ pkill picom && picom --experimental-backend --refresh-rate 144 --xrender-sync-fe
 clipster -d &
 
 ~/.config/polybar/launch.sh &
+~/scripts/xautostart.sh
