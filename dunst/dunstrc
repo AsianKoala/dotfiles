@@ -1,0 +1,87 @@
+# dunst — themed against pywal palette (hardcoded; re-render on wallpaper change)
+# bg = color0, fg = foreground, frame = color4, dim = color8, critical = color2
+
+[global]
+    monitor = 0
+    follow = mouse
+
+    width = (250, 420)
+    height = (0, 120)
+    origin = top-right
+    offset = (22, 22)
+    scale = 0
+    notification_limit = 5
+
+    progress_bar = true
+    progress_bar_height = 8
+    progress_bar_frame_width = 1
+    progress_bar_min_width = 150
+    progress_bar_max_width = 380
+
+    indicate_hidden = yes
+    transparency = 0
+    separator_height = 2
+    padding = 14
+    horizontal_padding = 16
+    text_icon_padding = 10
+    frame_width = 2
+    gap_size = 6
+    separator_color = frame
+    sort = yes
+
+    font = JetBrainsMono Nerd Font 10
+    line_height = 0
+    markup = full
+    format = "<b>%s</b>\n%b"
+    alignment = left
+    vertical_alignment = center
+    show_age_threshold = 60
+    ellipsize = middle
+    ignore_newline = no
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = yes
+
+    icon_position = left
+    min_icon_size = 32
+    max_icon_size = 64
+    icon_path = /usr/share/icons/Adwaita/32x32/status/:/usr/share/icons/Adwaita/32x32/devices/
+
+    sticky_history = yes
+    history_length = 20
+
+    dmenu = /usr/bin/rofi -dmenu -p dunst
+    browser = /usr/bin/xdg-open
+
+    title = Dunst
+    class = Dunst
+    corner_radius = 10
+    ignore_dbusclose = false
+
+    force_xwayland = false
+    force_xinerama = false
+
+    mouse_left_click = close_current
+    mouse_middle_click = do_action, close_current
+    mouse_right_click = close_all
+
+[experimental]
+    per_monitor_dpi = false
+
+[urgency_low]
+    background = "#0b0822"
+    foreground = "#e8ddd1"
+    frame_color = "#a29a92"
+    timeout = 5
+
+[urgency_normal]
+    background = "#0b0822"
+    foreground = "#e8ddd1"
+    frame_color = "#93518B"
+    timeout = 8
+
+[urgency_critical]
+    background = "#0b0822"
+    foreground = "#e8ddd1"
+    frame_color = "#A9344D"
+    timeout = 0

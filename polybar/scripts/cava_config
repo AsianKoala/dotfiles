@@ -1,0 +1,20 @@
+# cava config for polybar visualizer (8 bars, ASCII frame 0-7)
+[general]
+bars = 14
+framerate = 60
+sleep_timer = 1
+
+[input]
+method = pulse
+source = auto
+
+[smoothing]
+noise_reduction = 0.32
+monstercat = 1
+waves = 0
+
+[output]
+method = raw
+raw_target = /dev/stdout
+data_format = ascii
+ascii_max_range = 7

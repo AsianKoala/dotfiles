@@ -37,6 +37,6 @@ case $chosen in
 			systemctl reboot
         ;;
     $lock)
-			betterlockscreen -l dimblur --span
+			betterlockscreen -l dim --span
         ;;
 esac

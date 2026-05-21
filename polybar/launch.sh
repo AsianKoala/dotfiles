@@ -14,6 +14,10 @@ polybar -q center -c   ~/.config/polybar/config.ini &
 polybar -q left -c   ~/.config/polybar/config.ini &
 polybar -q right -c   ~/.config/polybar/config.ini &
 
+{% elif "edward" in profiles %}
+
+polybar -q right -c   ~/.config/polybar/config.ini &
+
 {% elif "displaylink2" in profiles %}
 
 polybar -q left -c   ~/.config/polybar/config.ini &

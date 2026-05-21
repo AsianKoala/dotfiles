@@ -33,7 +33,11 @@ fi
 
 
 alias ranger="cat /home/neil/dotfiles/wal/backup/sequences && ranger"
-alias ls='exa --icons'
+alias ls='eza --icons --git'
+alias ll='eza -l --icons --git --group-directories-first'
+alias la='eza -la --icons --git --group-directories-first'
+alias tree='eza --tree --icons'
+alias cat='bat --paging=never --style=plain'
 alias py='python3'
 alias icat="kitty +kitten icat --scale-up"
 alias wmc="xprop | grep WM_CLASS"
@@ -117,6 +121,9 @@ export PATH="/home/neil/scripts:$PATH"
 
 
 eval "$(direnv hook zsh)"
+eval "$(zoxide init zsh --cmd cd)"
+eval "$(starship init zsh)"
+export BAT_THEME="base16"
 
 
 # The next line updates PATH for the Google Cloud SDK.

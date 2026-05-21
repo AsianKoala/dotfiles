@@ -1,0 +1,84 @@
+# clean & minimal starship — no chevrons, single line, just essentials
+# colors pulled from pywal terminal palette via $foreground / $color5 etc
+
+add_newline = true
+command_timeout = 800
+
+format = """
+$directory\
+$git_branch$git_state$git_status\
+$python$rust$nodejs$lua\
+$cmd_duration\
+$line_break\
+$character"""
+
+[character]
+success_symbol = "[›](bold purple)"
+error_symbol   = "[×](bold red)"
+vimcmd_symbol  = "[‹](bold purple)"
+
+[directory]
+style = "bold"
+truncation_length = 4
+truncate_to_repo = false
+read_only = " "
+home_symbol = "~"
+format = "[$path]($style)[$read_only]($read_only_style) "
+
+[git_branch]
+symbol = " "
+style = "dimmed"
+format = "[$symbol$branch]($style) "
+
+[git_status]
+style = "dimmed"
+ahead       = "⇡${count}"
+behind      = "⇣${count}"
+diverged    = "⇡${ahead_count}⇣${behind_count}"
+conflicted  = "!"
+modified    = "•"
+staged      = "+"
+untracked   = "?"
+stashed     = "$"
+deleted     = "✘"
+format = "[$all_status$ahead_behind]($style) "
+
+[cmd_duration]
+min_time = 2000
+style = "dimmed"
+format = "[$duration]($style) "
+
+[python]
+symbol = " "
+style = "dimmed"
+format = "[$symbol(\\($virtualenv\\) )$version]($style) "
+detect_extensions = ["py", "ipynb"]
+detect_files = ["pyproject.toml", "requirements.txt", "Pipfile", ".python-version"]
+
+[rust]
+symbol = " "
+style = "dimmed"
+format = "[$symbol$version]($style) "
+
+[nodejs]
+symbol = " "
+style = "dimmed"
+format = "[$symbol$version]($style) "
+
+[lua]
+symbol = " "
+style = "dimmed"
+format = "[$symbol$version]($style) "
+
+# disable noisy modules
+[battery]
+disabled = true
+
+[hostname]
+disabled = true
+
+[username]
+disabled = true
+
+[package]
+disabled = true

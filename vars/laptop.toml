@@ -1,19 +1,19 @@
 [monitor]
-main = "eDP-1"
+main = "eDP-1-1"
 
 [mpd]
 using = "false"
 
 [bspwm]
-border_width = "3"
-top_padding = "50"
-bottom_padding = "15"
-left_padding = "15"
-right_padding = "15"
-window_gap = "15"
+border_width = "2"
+top_padding = "55"
+bottom_padding = "20"
+left_padding = "20"
+right_padding = "20"
+window_gap = "20"
 
 [polybar]
 network_device = "wlo1"
 
 [browser]
-cmd = "prime-run google-chrome-stable"
+cmd = "prime-run google-chrome-stable --use-angle=gl --ignore-gpu-blocklist --enable-gpu-rasterization --enable-zero-copy --enable-features=VaapiVideoDecoder,VaapiIgnoreDriverChecks,VaapiVideoEncoder"
