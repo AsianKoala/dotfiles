@@ -16,4 +16,4 @@ window_gap = "20"
 network_device = "wlo1"
 
 [browser]
-cmd = "prime-run google-chrome-stable --use-angle=gl --ignore-gpu-blocklist --enable-gpu-rasterization --enable-zero-copy --enable-features=VaapiVideoDecoder,VaapiIgnoreDriverChecks,VaapiVideoEncoder"
+cmd = "google-chrome-stable --enable-features=VaapiVideoDecoder,VaapiIgnoreDriverChecks --ignore-gpu-blocklist --enable-gpu-rasterization --enable-zero-copy"

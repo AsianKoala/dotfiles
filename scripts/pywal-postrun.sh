@@ -38,6 +38,15 @@ fi
 # 7. regenerate Chrome theme extension from the palette
 [ -x "$HOME/scripts/pywal-chrome-theme.sh" ] && "$HOME/scripts/pywal-chrome-theme.sh" >/dev/null 2>&1 || true
 
+# 7a. regenerate per-site Chrome content_script CSS (youtube, soundcloud)
+[ -x "$HOME/scripts/pywal-site-themes.sh" ] && "$HOME/scripts/pywal-site-themes.sh" >/dev/null 2>&1 || true
+
+# 7b. apply gtk-4.0/libadwaita theming (easyeffects + other libadwaita apps)
+if [ -f "$HOME/.cache/wal/colors-gtk4.css" ]; then
+    mkdir -p "$HOME/.config/gtk-4.0"
+    cp "$HOME/.cache/wal/colors-gtk4.css" "$HOME/.config/gtk-4.0/gtk.css"
+fi
+
 # 8. spicetify: copy generated color.ini into the Pywal theme and re-apply
 if command -v spicetify >/dev/null 2>&1 && [ -f "$HOME/.cache/wal/colors-spicetify.ini" ]; then
     theme_dir="$HOME/.config/spicetify/Themes/Pywal"

@@ -1,26 +1,23 @@
 configuration {
-  display-drun: "何をしたい ? ";
-  display-window: "Windows:";
+  display-drun: "";
+  display-window: "";
   drun-display-format: "{icon} {name}";
-  // font: "JetBrainsMono Nerd Font Medium 10";
-  font: "TerminessTTF Nerd Font";
-  modi: "window,run,drun";
+  font: "JetBrainsMono Nerd Font 11";
+  modi: "drun,run,window";
   show-icons: true;
+  icon-theme: "Papirus-Dark";
 }
 
-//@theme "/dev/null"
 @import "{{ wal }}/colors-rofi-dark"
 
 * {
-  bg: inherit;
-  bg-alt: inherit;
+  bg:          @background;
+  fg:          @foreground;
+  accent:      @selected-normal-background;
+  accent-dim:  @urgent-background;
 
-  fg: inherit;
-  fg-alt: inherit;
-
-  background-color: inherit;
-  
-  selected-normal-background: #5F4A65;
+  background-color: transparent;
+  text-color:       @fg;
 
   border: 0;
   margin: 0;
@@ -29,60 +26,68 @@ configuration {
 }
 
 window {
-  width: 480px;
-  border-radius: 20px;
-  border: 2;
-  border-color: #93518B;
+  width: 520px;
+  border-radius: 14px;
+  border: 1;
+  border-color: @accent-dim;
+  background-color: @bg;
+  padding: 14px;
 }
 
-element {
-  padding: 8 8;
-  text-color: inherit;
-}
-
-element selected {
-  text-color: inherit;
-  background-color: #5F4A65;
-
-}
-
-element-text {
-  background-color: inherit;
-  text-color: inherit;
-  vertical-align: 0.5;
-}
-
-element-icon {
-  size: 30;
-}
-
-entry {
-  background-color: inherit;
-  padding: 12;
-  text-color: inherit;
+mainbox {
+  children: [inputbar, listview];
 }
 
 inputbar {
   children: [prompt, entry];
-}
-
-listview {
-  padding: 8 12;
-  background-color: inherit;
-  columns: 1;
-  lines: 8;
-}
-
-mainbox {
-  background-color: inherit;
-  children: [inputbar, listview];
+  padding: 6px 10px;
+  background-color: transparent;
+  spacing: 8px;
 }
 
 prompt {
-  background-color: inherit;
-  enabled: true;
-  padding: 12 0 0 12;
+  text-color: @accent;
+  padding: 6px 0;
+  font: "JetBrainsMono Nerd Font Bold 11";
+}
+
+entry {
+  padding: 6px 0;
+  text-color: @fg;
+  placeholder: "search";
+  placeholder-color: @accent-dim;
+}
+
+listview {
+  padding: 10px 0 0 0;
+  columns: 1;
+  lines: 8;
+  fixed-height: false;
+  background-color: transparent;
+  spacing: 2px;
+}
+
+element {
+  padding: 8px 10px;
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+element selected {
+  background-color: @accent;
+  text-color: @fg;
+}
+
+element-icon {
+  size: 22;
+  background-color: transparent;
+  padding: 0 8px 0 0;
+}
+
+element-text {
+  vertical-align: 0.5;
+  background-color: transparent;
   text-color: inherit;
 }
 
-/* vim: ft=sass
+/* vim: ft=sass */

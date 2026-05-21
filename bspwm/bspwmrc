@@ -13,6 +13,13 @@ bspc monitor {{ monitor.left }} -d 1 2 3 4 5
 bspc monitor {{ monitor.wide }} -d 6 7 8 9 10
 bspc monitor {{ monitor.main }} -d 11 12 13 14 15
 
+{% elif "edward" in profiles %}
+
+bspc wm -O {{ monitor.wide }} {{ monitor.main }}
+
+bspc monitor {{ monitor.wide }} -d 1 2 3 4 5
+bspc monitor {{ monitor.main }} -d 6 7 8 9 10
+
 {% elif "laptop" in profiles %}
 
 bspc wm -O {{ monitor.main }}
@@ -55,9 +62,11 @@ bspc config bottom_padding {{ bspwm.bottom_padding }}
 bspc config left_padding {{ bspwm.left_padding }}
 bspc config right_padding {{ bspwm.right_padding }}
 
-bspc config focused_border_color "#93518B"
-bspc config active_border_color "#5F4A65"
-bspc config normal_border_color "#5F4A65"
+# source pywal palette so borders track the wallpaper theme
+. "$HOME/.cache/wal/colors.sh"
+bspc config focused_border_color "$color5"
+bspc config active_border_color  "$color4"
+bspc config normal_border_color  "$color1"
 
 bspc config ignore_ewmh_focus true
 

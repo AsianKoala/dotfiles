@@ -40,6 +40,8 @@ nogap = { source = "scripts/nogap.sh", target = "scripts/nogap.sh" }
 sp = { source = "scripts/sp", target = "scripts/sp" }
 xauto = { source = "scripts/xautostart.sh", target = "scripts/xautostart.sh" }
 xev = { source = "scripts/xev.sh", target = "scripts/xev.sh" }
+monwatch = { source = "scripts/monitor-watch.sh", target = "scripts/monitor-watch.sh" }
+rofibt = { source = "scripts/rofi-bluetooth.sh", target = "scripts/rofi-bluetooth.sh" }
 ycmd = { source = "scripts/ycmd.sh", target = "scripts/ycmd.sh" }
 yt = { source = "scripts/yt.sh", target = "scripts/yt.sh" }
 ytarchive = { source = "scripts/ytarchive.sh", target = "scripts/ytarchive.sh" }
@@ -56,6 +58,18 @@ polybar = { source = "polybar", target = ".config/polybar" }
 rofi = { source = "rofi", target = ".config/rofi" }
 sxhkd = { source = "sxhkd", target = ".config/sxhkd" }
 easyeffects = { source = "easyeffects", target = ".config/easyeffects" }
+picom = { source = "picom", target = ".config/picom" }
+dunst = { source = "dunst", target = ".config/dunst" }
+starship = { source = "zsh/starship.toml", target = ".config/starship.toml" }
+xcursor = { source = "icons/default", target = ".icons/default" }
+
+pywalpost = { source = "scripts/pywal-postrun.sh", target = "scripts/pywal-postrun.sh" }
+pywalchrome = { source = "scripts/pywal-chrome-theme.sh", target = "scripts/pywal-chrome-theme.sh" }
+pywalsites = { source = "scripts/pywal-site-themes.sh", target = "scripts/pywal-site-themes.sh" }
+pywalkmeans = { source = "scripts/pywal-from-kmeans.py", target = "scripts/pywal-from-kmeans.py" }
+setwall     = { source = "scripts/setwall.sh", target = "scripts/setwall.sh" }
+spicetifytheme = { source = "spicetify/Themes/Pywal/user.css", target = ".config/spicetify/Themes/Pywal/user.css" }
+spicetifysetup = { source = "scripts/spicetify-setup.sh", target = "scripts/spicetify-setup.sh" }
 
 betterlockscreen = { source = "betterlockscreen/betterlockscreenrc", target = ".config/betterlockscreenrc" }
 screenlayout = { source = "screenlayout", target = ".screenlayout" }
@@ -89,3 +103,7 @@ vars = [ "vars/laptophome.toml" ]
 [profiles.home]
 
 vars = [ "vars/home.toml" ]
+
+[profiles.edward]
+
+vars = [ "vars/edward.toml" ]

@@ -68,10 +68,14 @@ super + grave
   betterlockscreen -l
 
 
-#focus or send to the given desktop
+#focus or send to the Nth desktop *of the currently focused monitor*
+# (super+1..5 = local desktops on this monitor; super+shift+1..5 = send window there)
 
-super + {_,shift + }{1-9}
-	bspc {desktop -f,node -d} {1,2,3,4,5,6,7,8,9}
+super + {1,2,3,4,5}
+  bspc desktop -f "$(bspc query -D -m focused --names | sed -n '{1,2,3,4,5}p')"
+
+super + shift + {1,2,3,4,5}
+  bspc node -d "$(bspc query -D -m focused --names | sed -n '{1,2,3,4,5}p')" --follow
 
 super + shift + bracket{left,right}
   bspc node -d {prev,next}.local
@@ -86,7 +90,7 @@ super + x
 {% if "laptop" in profiles %}
 
 super + Delete
-  betterlockscreen -l dimblur --display 1
+  betterlockscreen -l dim --display 1
 
 XF86AudioRaiseVolume
   pactl set-sink-volume 0 +2%
@@ -109,7 +113,7 @@ XF86MonBrightnessDown
 
 {% else %}
 super + Scroll_Lock
-  betterlockscreen -l dimblur --display 1
+  betterlockscreen -l dim --display 1
 
 super + Delete
   mpc volume -1
@@ -158,8 +162,12 @@ super + b
 super + c 
   clipster -sc
 
-super + period 
+super + period
   rofi -modi emoji -show emoji -kb-custom-1 Ctrl+C
+
+# bluetooth manager
+super + shift + b
+  ~/scripts/rofi-bluetooth.sh
 
 
 super + ctrl + {h,j,k,l}

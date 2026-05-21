@@ -8,6 +8,7 @@ if ! command -v playerctl >/dev/null 2>&1; then
   exit 0
 fi
 
+{% raw %}
 format='{{ title }} — {{ artist }}'
 
 emit() {
@@ -17,6 +18,7 @@ emit() {
 
   title=$(playerctl metadata --format '{{ title }}' 2>/dev/null)
   artist=$(playerctl metadata --format '{{ artist }}' 2>/dev/null)
+{% endraw %}
   [ -z "$title" ] && { echo ""; return; }
 
   if [ -n "$artist" ]; then

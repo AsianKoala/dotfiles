@@ -33,6 +33,8 @@ brightnessctl s 10%
 
 
 export XCURSOR_SIZE=24
+export XCURSOR_THEME=Bibata-Modern-Classic
+export GTK_THEME=catppuccin-mocha-mauve-standard+default
 
 # wm
 exec bspwm
