@@ -1,0 +1,63 @@
+@namespace url("http://www.w3.org/1999/xhtml");
+
+@import url("colors.css");
+
+/* about: pages (preferences, addons, etc.) */
+@-moz-document url-prefix("about:preferences"),
+               url-prefix("about:addons"),
+               url-prefix("about:accountsettings"),
+               url-prefix("about:addressbook"),
+               url-prefix("about:newerror"),
+               url-prefix("about:certerror") {
+  :root,
+  body {
+    background-color: var(--wal-bg) !important;
+    color: var(--wal-fg) !important;
+  }
+
+  a,
+  .text-link {
+    color: var(--wal-c6) !important;
+  }
+
+  button,
+  .button {
+    background-color: var(--wal-c0) !important;
+    color: var(--wal-fg) !important;
+    border-color: color-mix(in srgb, var(--wal-c8) 40%, transparent) !important;
+  }
+
+  button:hover,
+  .button:hover {
+    background-color: color-mix(in srgb, var(--wal-c4) 25%, var(--wal-c0)) !important;
+  }
+
+  button.primary,
+  .button.primary {
+    background-color: var(--wal-c4) !important;
+    color: var(--wal-c15) !important;
+  }
+
+  input,
+  textarea,
+  select {
+    background-color: var(--wal-c0) !important;
+    color: var(--wal-fg) !important;
+    border-color: color-mix(in srgb, var(--wal-c8) 50%, transparent) !important;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    border-color: var(--wal-c4) !important;
+    outline-color: var(--wal-c4) !important;
+  }
+}
+
+/* compose body */
+@-moz-document url-prefix("chrome://messenger/content/messengercompose/") {
+  body {
+    background-color: var(--wal-bg) !important;
+    color: var(--wal-fg) !important;
+  }
+}

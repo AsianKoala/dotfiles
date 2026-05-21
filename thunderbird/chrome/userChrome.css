@@ -1,0 +1,246 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+@import url("colors.css");
+
+:root,
+:root[lwt-tree],
+:root[lwtheme] {
+  --lwt-accent-color: var(--wal-bg) !important;
+  --lwt-text-color: var(--wal-fg) !important;
+  --toolbar-bgcolor: var(--wal-bg) !important;
+  --toolbar-color: var(--wal-fg) !important;
+  --toolbarbutton-icon-fill: var(--wal-fg) !important;
+  --toolbarbutton-icon-fill-attention: var(--wal-c4) !important;
+  --toolbarbutton-hover-background: color-mix(in srgb, var(--wal-c4) 20%, transparent) !important;
+  --toolbarbutton-active-background: color-mix(in srgb, var(--wal-c4) 35%, transparent) !important;
+  --toolbar-field-background-color: var(--wal-c0) !important;
+  --toolbar-field-color: var(--wal-fg) !important;
+  --toolbar-field-focus-background-color: var(--wal-c0) !important;
+  --toolbar-field-focus-border-color: var(--wal-c4) !important;
+  --toolbar-field-border-color: transparent !important;
+  --tab-line-color: var(--wal-c4) !important;
+  --tabline-color: var(--wal-c4) !important;
+  --tab-selected-bgcolor: color-mix(in srgb, var(--wal-c4) 25%, var(--wal-bg)) !important;
+  --tab-selected-textcolor: var(--wal-c15) !important;
+  --tabs-toolbar-background-color: var(--wal-bg) !important;
+  --arrowpanel-background: var(--wal-bg) !important;
+  --arrowpanel-color: var(--wal-fg) !important;
+  --arrowpanel-border-color: var(--wal-c4) !important;
+  --button-bgcolor: var(--wal-c0) !important;
+  --button-hover-bgcolor: color-mix(in srgb, var(--wal-c4) 25%, var(--wal-c0)) !important;
+  --button-active-bgcolor: var(--wal-c4) !important;
+  --button-primary-bgcolor: var(--wal-c4) !important;
+  --button-primary-hover-bgcolor: var(--wal-c6) !important;
+  --button-primary-color: var(--wal-c15) !important;
+  --selected-item-color: var(--wal-c4) !important;
+  --selected-item-text-color: var(--wal-c15) !important;
+  --color-accent-primary: var(--wal-c4) !important;
+  --color-accent-primary-hover: var(--wal-c6) !important;
+  --color-accent-primary-active: var(--wal-c5) !important;
+  --layout-background-0: var(--wal-bg) !important;
+  --layout-background-1: var(--wal-c0) !important;
+  --layout-background-2: var(--wal-c0) !important;
+  --layout-background-3: color-mix(in srgb, var(--wal-c8) 50%, var(--wal-bg)) !important;
+  --layout-color-0: var(--wal-fg) !important;
+  --layout-color-1: var(--wal-fg) !important;
+  --layout-color-2: var(--wal-c8) !important;
+  --layout-color-3: var(--wal-fg) !important;
+  --color-background-base: var(--wal-bg) !important;
+  --color-background-secondary: var(--wal-c0) !important;
+  --color-background-toolbar: var(--wal-bg) !important;
+  --color-background-success: color-mix(in srgb, var(--wal-c2) 25%, var(--wal-bg)) !important;
+  --color-background-warning: color-mix(in srgb, var(--wal-c3) 25%, var(--wal-bg)) !important;
+  --color-background-critical: color-mix(in srgb, var(--wal-c1) 35%, var(--wal-bg)) !important;
+  --color-border-default: color-mix(in srgb, var(--wal-c8) 50%, transparent) !important;
+  --color-border-emphasis: var(--wal-c4) !important;
+  --sidebar-background-color: var(--wal-bg) !important;
+  --sidebar-text-color: var(--wal-fg) !important;
+  --sidebar-highlight-background-color: var(--wal-c4) !important;
+  --sidebar-highlight-text-color: var(--wal-c15) !important;
+  --in-content-page-background: var(--wal-bg) !important;
+  --in-content-page-color: var(--wal-fg) !important;
+  --in-content-box-background: var(--wal-c0) !important;
+  --in-content-box-background-hover: color-mix(in srgb, var(--wal-c4) 15%, var(--wal-c0)) !important;
+  --in-content-item-selected: var(--wal-c4) !important;
+  --in-content-item-selected-text: var(--wal-c15) !important;
+  --in-content-link-color: var(--wal-c6) !important;
+  --in-content-link-color-hover: var(--wal-c14) !important;
+  --in-content-border-color: color-mix(in srgb, var(--wal-c8) 50%, transparent) !important;
+  --focus-outline-color: var(--wal-c4) !important;
+  --tree-view-bg: var(--wal-bg) !important;
+  --tree-view-color: var(--wal-fg) !important;
+  --tree-view-header-bg: var(--wal-c0) !important;
+  --tree-view-header-hover-bg: color-mix(in srgb, var(--wal-c4) 15%, var(--wal-c0)) !important;
+  --listbox-selected-background: var(--wal-c4) !important;
+  --listbox-selected-color: var(--wal-c15) !important;
+  --listbox-hover: color-mix(in srgb, var(--wal-c4) 20%, transparent) !important;
+  --calendar-view-header-background-color: var(--wal-c0) !important;
+  --calendar-view-toggle-background-color: var(--wal-bg) !important;
+  --calendar-view-toggle-border-color: var(--wal-c4) !important;
+}
+
+/* Window backdrop */
+#messengerWindow,
+#tabmail-tabs,
+#tabs-toolbar,
+.unified-toolbar,
+#navigation-toolbox,
+#tabmail-container {
+  background-color: var(--wal-bg) !important;
+  color: var(--wal-fg) !important;
+}
+
+/* Folder pane (HTML in Supernova) */
+#folderTree,
+#folderPaneBox,
+#folderTreeServerPicker {
+  background-color: var(--wal-bg) !important;
+  color: var(--wal-fg) !important;
+}
+
+/* Thread pane rows */
+#threadTree,
+#threadTree > .tree-view-scrollable-container {
+  background-color: var(--wal-bg) !important;
+  color: var(--wal-fg) !important;
+}
+
+#threadTree [is="thread-row"][selected],
+#threadTree [is="thread-card"][selected],
+.tree-view-row[selected],
+#folderTree li.selected > .container {
+  background-color: var(--wal-c4) !important;
+  color: var(--wal-c15) !important;
+}
+
+#threadTree [is="thread-row"]:not([selected]):hover,
+#threadTree [is="thread-card"]:not([selected]):hover,
+.tree-view-row:not([selected]):hover,
+#folderTree li:not(.selected) > .container:hover {
+  background-color: color-mix(in srgb, var(--wal-c4) 18%, transparent) !important;
+}
+
+/* Unread indicator + new mail accents */
+#threadTree [is="thread-row"].unread,
+#threadTree [is="thread-card"].unread {
+  font-weight: 600 !important;
+  color: var(--wal-c15) !important;
+}
+
+#folderTree li.unread > .container .name {
+  color: var(--wal-c6) !important;
+  font-weight: 600 !important;
+}
+
+/* Message header (in 3-pane reader) */
+#messageHeader,
+.message-header-container,
+#messagepanebox {
+  background-color: var(--wal-bg) !important;
+  color: var(--wal-fg) !important;
+}
+
+#messageHeader .header-row,
+#messageHeader .header-label,
+#messageHeader .header-value {
+  color: var(--wal-fg) !important;
+}
+
+#messageHeader a.email-headers-link {
+  color: var(--wal-c6) !important;
+}
+
+/* Tabs (top tab strip) */
+.tab-background {
+  background-color: var(--wal-bg) !important;
+}
+
+.tabmail-tab[selected="true"] .tab-background {
+  background-color: color-mix(in srgb, var(--wal-c4) 25%, var(--wal-bg)) !important;
+  border-bottom: 2px solid var(--wal-c4) !important;
+}
+
+.tab-icon-image,
+.tab-label {
+  color: var(--wal-fg) !important;
+}
+
+/* Splitter handles */
+hr[is="pane-splitter"],
+.splitter {
+  background-color: color-mix(in srgb, var(--wal-c8) 40%, var(--wal-bg)) !important;
+}
+
+/* Status bar */
+#status-bar,
+#statusbar-display {
+  background-color: var(--wal-bg) !important;
+  color: var(--wal-c8) !important;
+}
+
+/* Menus / popups */
+menupopup,
+panel {
+  --panel-background: var(--wal-bg);
+  --panel-color: var(--wal-fg);
+  --panel-border-color: var(--wal-c4);
+}
+
+menuitem[_moz-menuactive="true"],
+menu[_moz-menuactive="true"] {
+  background-color: var(--wal-c4) !important;
+  color: var(--wal-c15) !important;
+}
+
+/* Scrollbars (where overridable) */
+* {
+  scrollbar-color: color-mix(in srgb, var(--wal-c4) 60%, var(--wal-c8)) transparent !important;
+  scrollbar-width: thin !important;
+}
+
+/* Spaces toolbar (left rail with mail/calendar/etc icons) */
+#spacesToolbar {
+  background-color: var(--wal-c0) !important;
+}
+
+#spacesToolbar .spaces-toolbar-button {
+  color: var(--wal-fg) !important;
+}
+
+#spacesToolbar .spaces-toolbar-button[current="true"],
+#spacesToolbar .spaces-toolbar-button:hover {
+  background-color: color-mix(in srgb, var(--wal-c4) 30%, var(--wal-c0)) !important;
+  color: var(--wal-c15) !important;
+}
+
+/* Unified toolbar buttons */
+#unifiedToolbarContent > .button,
+.unified-toolbar .button {
+  color: var(--wal-fg) !important;
+}
+
+#unifiedToolbarContent > .button:hover {
+  background-color: color-mix(in srgb, var(--wal-c4) 25%, transparent) !important;
+}
+
+/* Compose window */
+#msgcomposeWindow {
+  background-color: var(--wal-bg) !important;
+  color: var(--wal-fg) !important;
+}
+
+#msgIdentity,
+.address-row,
+#attachmentBucket {
+  background-color: var(--wal-c0) !important;
+  color: var(--wal-fg) !important;
+}
+
+/* Address-book / preferences embedded HTML */
+@-moz-document url-prefix("about:") {
+  :root {
+    background-color: var(--wal-bg) !important;
+    color: var(--wal-fg) !important;
+  }
+}

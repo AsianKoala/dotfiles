@@ -54,3 +54,35 @@ if command -v spicetify >/dev/null 2>&1 && [ -f "$HOME/.cache/wal/colors-spiceti
     cp "$HOME/.cache/wal/colors-spicetify.ini" "$theme_dir/color.ini"
     spicetify apply >/dev/null 2>&1 || true
 fi
+
+# 9. thunderbird: refresh chrome/colors.css from the wal cache.
+# chrome/ is symlinked into the active TB profile by scripts/thunderbird-theme-install.sh,
+# so this single copy reaches the running profile. TB needs a full restart to re-read it.
+if [ -f "$HOME/.cache/wal/colors-thunderbird.css" ] && [ -d "$HOME/dotfiles/thunderbird/chrome" ]; then
+    cp "$HOME/.cache/wal/colors-thunderbird.css" "$HOME/dotfiles/thunderbird/chrome/colors.css"
+fi
+
+# 10. plasma color scheme: install ~/.local/share/color-schemes/Pywal.colors
+# so any app that looks the "Pywal" scheme up by ID (kcolorschemeeditor etc.) finds it.
+if [ -f "$HOME/.cache/wal/colors-plasma.colors" ]; then
+    mkdir -p "$HOME/.local/share/color-schemes"
+    cp "$HOME/.cache/wal/colors-plasma.colors" "$HOME/.local/share/color-schemes/Pywal.colors"
+fi
+
+# 11. kdeglobals: KDEPlasmaPlatformTheme6 (plasma-integration) reads [Colors:*]
+# sections directly from kdeglobals — NOT from the scheme file referenced by
+# ColorScheme=. So inline the palette here. Without this, Qt6/Kirigami apps
+# (easyeffects, etc.) fall back to the default light palette.
+if [ -f "$HOME/.cache/wal/kdeglobals" ]; then
+    # break symlinks; we want a regular file so cp overwrites in place
+    if [ -L "$HOME/.config/kdeglobals" ]; then
+        rm "$HOME/.config/kdeglobals"
+    fi
+    cp "$HOME/.cache/wal/kdeglobals" "$HOME/.config/kdeglobals"
+fi
+
+# 12. pywalfox: push new palette to Thunderbird (and Firefox) via the
+# pywalfox native messaging host. Requires the pywalfox TB add-on installed.
+if command -v pywalfox >/dev/null 2>&1; then
+    pywalfox update >/dev/null 2>&1 || true
+fi

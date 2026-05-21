@@ -36,5 +36,10 @@ export XCURSOR_SIZE=24
 export XCURSOR_THEME=Bibata-Modern-Classic
 export GTK_THEME=catppuccin-mocha-mauve-standard+default
 
+# Qt6/Kirigami apps (easyeffects, etc.) need plasma-integration's KDEPlasmaPlatformTheme6
+# QPA plugin to bridge kdeglobals → QApplication palette. Selecting it via env vars:
+export QT_QPA_PLATFORMTHEME=kde
+export XDG_CURRENT_DESKTOP=KDE
+
 # wm
 exec bspwm
