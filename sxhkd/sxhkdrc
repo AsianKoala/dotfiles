@@ -89,6 +89,15 @@ super + x
 
 {% if "laptop" in profiles %}
 
+# zen mode: zero gaps/padding + kill polybar (picom fades it out/in)
+super + backslash
+  ~/scripts/zen.sh
+
+# toggle polybar visibility; on show, force-raise above kitty (else fullscreen
+# kitty stays on top because bspwm wins polybar's wm-restack race)
+super + minus
+  sh -c '(polybar-msg cmd toggle 2>/dev/null || ~/.config/polybar/launch.sh); sleep 0.1; ~/scripts/polybar-raise.sh'
+
 super + Delete
   betterlockscreen -l dim --display 1
 
@@ -179,33 +188,7 @@ super + ctrl + space
 super + e
   pcmanfm 
 
-{% if "laptop" in profiles %}
-
-{% if "displaylink2" in profiles %}
-
+# relink dotfiles for whatever profile set is currently active
 super + g
-  bombadil link -p laptop displaylink2
+  bombadil link -p {{ profiles | join(sep=" ") }}
 
-{% elif "displaylink3" in profiles %}
-
-super + g
-  bombadil link -p laptop displaylink3
-
-{% elif "home" in profiles %}
-
-super + g
-  bombadil link -p laptop home
-
-{% else %}
-
-super + g
-  bombadil link -p laptop
-
-{% endif %}
-
-{% else %}
-
-super + g
-  bombadil link -p desktop
-
-{% endif %}
