@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Managed by brew services (homebrew.mxcl.borders). Loaded automatically on launch.
+options=(
+  style=round
+  width=4.0
+  hidpi=off
+  active_color=0xffcdd6f4
+  inactive_color=0xff45475a
+)
+borders "${options[@]}"

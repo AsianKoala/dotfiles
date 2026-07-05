@@ -1,0 +1,46 @@
+# ============================================================================
+# skhd — hotkey daemon for yabai (macOS). Mirrors Arch sxhkd/bspwm workflow.
+# ============================================================================
+
+# --- focus window (bsp directional) ---
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+
+# --- swap window ---
+shift + alt - h : yabai -m window --swap west
+shift + alt - j : yabai -m window --swap south
+shift + alt - k : yabai -m window --swap north
+shift + alt - l : yabai -m window --swap east
+
+# --- warp window (move into split) ---
+ctrl + alt - h : yabai -m window --warp west
+ctrl + alt - l : yabai -m window --warp east
+
+# --- focus space 1..5 ---
+alt - 1 : yabai -m space --focus 1
+alt - 2 : yabai -m space --focus 2
+alt - 3 : yabai -m space --focus 3
+alt - 4 : yabai -m space --focus 4
+alt - 5 : yabai -m space --focus 5
+
+# --- send focused window to space 1..5 (stay put) ---
+shift + alt - 1 : yabai -m window --space 1
+shift + alt - 2 : yabai -m window --space 2
+shift + alt - 3 : yabai -m window --space 3
+shift + alt - 4 : yabai -m window --space 4
+shift + alt - 5 : yabai -m window --space 5
+
+# --- layout / tree management ---
+alt - r : yabai -m space --rotate 270
+alt - e : yabai -m space --balance
+# resize the adjustable edge by 40px (falls back to opposite edge for edge windows)
+alt - a : yabai -m window --resize left:-40:0 || yabai -m window --resize right:-40:0
+alt - d : yabai -m window --resize right:40:0 || yabai -m window --resize left:40:0
+
+# --- window actions ---
+alt - return : open -na kitty
+alt - q : yabai -m window --close
+alt - t : yabai -m window --toggle float
+alt - f : yabai -m window --toggle zoom-fullscreen
