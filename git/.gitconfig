@@ -7,3 +7,7 @@
 	ff = only
 [init]
 	defaultBranch = master
+# Machine-local overrides (e.g. macOS credential.helper = osxkeychain).
+# Git silently ignores this include when the file is absent (e.g. on the Arch box).
+[include]
+	path = ~/.gitconfig.local

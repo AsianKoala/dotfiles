@@ -15,7 +15,7 @@ plugins=(
   sudo
 )
 
-source $ZSH/oh-my-zsh.sh
+[[ -r $ZSH/oh-my-zsh.sh ]] && source $ZSH/oh-my-zsh.sh
 
 autoload -Uz add-zsh-hook
 _set_beam_cursor() { echo -ne '\e[5 q' }
@@ -91,13 +91,18 @@ fix() {
   xmodmap ~/.Xmodmap
 }
 
-(cat {{ wal }}/sequences &)
-
-source {{ wal }}/colors-tty.sh
+# pywal (Linux only — bombadil renders {{ wal }}; the literal path is skipped on macOS)
+if [[ "$OSTYPE" != darwin* ]]; then
+  (cat {{ wal }}/sequences &)
+  source {{ wal }}/colors-tty.sh
+fi
 
 export RANGER_LOAD_DEFAULT_RC=false
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-export VISUAL=/usr/bin/nvim
+# Linux uses an XDG-runtime ssh-agent socket; on macOS keep the launchd/keychain agent
+if [[ "$OSTYPE" != darwin* ]]; then
+  export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+fi
+export VISUAL="$(command -v nvim)"
 export GIT_EDITOR="$VISUAL"
 export EDITOR="$VISUAL"
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -116,12 +121,12 @@ if [[ -n $SSH_CONNECTION ]] ; then
 fi
 
 
-unalias gcp
+unalias gcp 2>/dev/null
 export PATH="/home/neil/scripts:$PATH"
 
 
-eval "$(direnv hook zsh)"
-eval "$(zoxide init zsh --cmd cd)"
+command -v direnv &>/dev/null && eval "$(direnv hook zsh)"
+command -v zoxide &>/dev/null && eval "$(zoxide init zsh --cmd cd)"
 eval "$(starship init zsh)"
 export BAT_THEME="base16"
 
