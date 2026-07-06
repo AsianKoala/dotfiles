@@ -33,11 +33,11 @@ shift + alt - 4 : yabai -m window --space 4
 shift + alt - 5 : yabai -m window --space 5
 
 # --- prev / next space (old super + [ / ]); wraps around at the ends ---
-alt - 0x21 : yabai -m space --focus prev || yabai -m space --focus last   # [
-alt - 0x1e : yabai -m space --focus next || yabai -m space --focus first  # ]
-# send focused window to prev / next space
+# 0x21 = [ , 0x1E = ]  (skhd: no trailing comments on a binding line)
+alt - 0x21 : yabai -m space --focus prev || yabai -m space --focus last
+alt - 0x1E : yabai -m space --focus next || yabai -m space --focus first
 shift + alt - 0x21 : yabai -m window --space prev || yabai -m window --space last
-shift + alt - 0x1e : yabai -m window --space next || yabai -m window --space first
+shift + alt - 0x1E : yabai -m window --space next || yabai -m window --space first
 
 # --- layout / tree management ---
 alt - r : yabai -m space --rotate 270
