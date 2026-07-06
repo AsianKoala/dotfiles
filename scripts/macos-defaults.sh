@@ -33,8 +33,14 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 mkdir -p "$HOME/Pictures/screenshots"
 defaults write com.apple.screencapture location "$HOME/Pictures/screenshots"
 
+# --- Rice: hide desktop widgets, auto-hide the native menu bar (sketchybar is the bar) ---
+defaults write com.apple.WindowManager StandardHideWidgets    -bool true
+defaults write com.apple.WindowManager StageManagerHideWidgets -bool true
+defaults write NSGlobalDomain _HIHideMenuBar -bool true
+
 # --- Apply ---
 killall Dock 2>/dev/null || true
 killall Finder 2>/dev/null || true
+killall SystemUIServer 2>/dev/null || true
 
 echo "macOS defaults applied. (Some changes require logout/restart to fully take effect.)"

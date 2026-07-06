@@ -15,6 +15,7 @@ yabai -m config right_padding 8
 yabai -m config mouse_modifier alt
 yabai -m config mouse_action1 move
 yabai -m config mouse_action2 resize
+yabai -m config focus_follows_mouse autofocus   # focus window under cursor (no raise)
 
 yabai -m rule --add app="^(System Settings|Calculator|Finder|Installer|Activity Monitor)$" manage=off
 yabai -m rule --add title="^(Preferences|Settings)$" manage=off
