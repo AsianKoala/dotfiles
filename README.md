@@ -1,5 +1,5 @@
 <div align="center">
 
-![my rice](assets/rice.png)
+![my dotfiles](assets/mac.png)
 
 </div>
