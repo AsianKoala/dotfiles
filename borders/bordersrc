@@ -1,10 +1,22 @@
 #!/usr/bin/env bash
 # Managed by brew services (homebrew.mxcl.borders). Loaded automatically on launch.
+# Colors are pulled from the pywal palette so borders match the active theme;
+# falls back to Catppuccin if the wal cache isn't present yet.
+
+active="0xffcdd6f4"
+inactive="0xff45475a"
+if [ -f "$HOME/.cache/wal/colors.sh" ]; then
+  # shellcheck disable=SC1091
+  . "$HOME/.cache/wal/colors.sh"
+  active="0xff${color6#\#}"    # vivid accent (keywords / loud pink)
+  inactive="0xff${color8#\#}"  # dim / comment tone
+fi
+
 options=(
   style=round
   width=4.0
   hidpi=off
-  active_color=0xffcdd6f4
-  inactive_color=0xff45475a
+  active_color=$active
+  inactive_color=$inactive
 )
 borders "${options[@]}"

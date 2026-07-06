@@ -1,0 +1,27 @@
+{
+  "wallpaper": "/Users/neilmehra/Pictures/wallpapers/hydrangea.jpg",
+  "alpha": "100",
+  "special": {
+    "background": "#170411",
+    "foreground": "#ECD4E4",
+    "cursor": "#ECD4E4"
+  },
+  "colors": {
+    "color0": "#170411",
+    "color1": "#621C45",
+    "color2": "#931F63",
+    "color3": "#C32280",
+    "color4": "#DC3B9A",
+    "color5": "#B84689",
+    "color6": "#EA70B8",
+    "color7": "#ECD4E4",
+    "color8": "#76616F",
+    "color9": "#621C45",
+    "color10": "#931F63",
+    "color11": "#C32280",
+    "color12": "#DC3B9A",
+    "color13": "#B84689",
+    "color14": "#EA70B8",
+    "color15": "#F7E8F2"
+  }
+}

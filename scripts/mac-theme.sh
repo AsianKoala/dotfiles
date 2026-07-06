@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 # ============================================================================
-# mac-theme.sh — static pywal theming for macOS.
-# Regenerates ~/.cache/wal/* from a preset colorscheme (no wallpaper/imagemagick
-# needed) and live-reloads kitty + tmux. nvim picks it up on next launch.
-# Usage: mac-theme.sh [scheme]   (default: nia)
+# mac-theme.sh — apply a *preset* pywal colorscheme on macOS (no wallpaper).
+# Regenerates ~/.cache/wal/* from a scheme in wal/colorschemes/dark/ and
+# propagates to kitty/tmux/borders/sketchybar. To theme FROM a wallpaper
+# instead, use mac-setwall.sh <image>.
+#   mac-theme.sh [scheme]   (default: nia; e.g. kmeans-current)
 # ============================================================================
 set -euo pipefail
 
@@ -18,11 +19,4 @@ SCHEME_PATH="$HOME/.config/wal/colorschemes/dark/${SCHEME}.json"
 "$WAL" -n -s -t -e -q --theme "$SCHEME_PATH"
 echo "Generated ~/.cache/wal from '$SCHEME'."
 
-# Live-reload running apps (kitty reloads config on SIGUSR1)
-if pgrep -x kitty >/dev/null; then
-  kill -SIGUSR1 "$(pgrep -x kitty | tr '\n' ' ')" 2>/dev/null && echo "reloaded kitty"
-fi
-if tmux info &>/dev/null; then
-  tmux source-file "$HOME/.config/tmux/tmux.conf" 2>/dev/null && echo "reloaded tmux"
-fi
-echo "nvim: restart to pick up the new palette."
+exec "$HOME/dotfiles/scripts/mac-reload.sh"
