@@ -27,18 +27,19 @@ read -r CW CH < <(awk -v dw="$DW" -v dh="$DH" -v sw="$SW" -v sh="$SH" 'BEGIN{
 sips -c "$CH" "$CW" "$SRC" --out "$DST" >/dev/null
 echo "cropped ${SW}x${SH} -> ${CW}x${CH}  ($DST)"
 
-# --- set wallpaper on ALL spaces (macOS stores wallpaper per-space) ---
-if ! command -v wallpaper >/dev/null 2>&1; then
-  echo "note: 'wallpaper' CLI missing (brew install wallpaper)"
-elif command -v yabai >/dev/null 2>&1 && yabai -m query --spaces >/dev/null 2>&1; then
+# --- set wallpaper on ALL spaces via System Events ---
+# (the `wallpaper`/NSWorkspace CLI reports success but does NOT render on macOS
+#  Sonoma+/Tahoe — System Events is what the current wallpaper agent respects.)
+_setwall() { osascript -e "tell application \"System Events\" to tell every desktop to set picture to \"$DST\"" 2>/dev/null; }
+if command -v yabai >/dev/null 2>&1 && yabai -m query --spaces >/dev/null 2>&1; then
   orig=$(yabai -m query --spaces | jq -r '.[] | select(.["has-focus"]==true) | .index')
   for s in $(yabai -m query --spaces | jq -r '.[] | select(.["is-native-fullscreen"]==false) | .index'); do
-    yabai -m space --focus "$s" 2>/dev/null; sleep 0.5; wallpaper set "$DST"
+    yabai -m space --focus "$s" 2>/dev/null; sleep 0.5; _setwall
   done
-  yabai -m space --focus "${orig:-1}" 2>/dev/null; sleep 0.3; wallpaper set "$DST"
+  yabai -m space --focus "${orig:-1}" 2>/dev/null; sleep 0.3; _setwall
   echo "wallpaper set on all spaces."
 else
-  wallpaper set "$DST"; echo "wallpaper set (current space only; yabai unavailable)."
+  _setwall; echo "wallpaper set (current space; yabai unavailable)."
 fi
 
 # --- regenerate palette from the wallpaper via kmeans ---

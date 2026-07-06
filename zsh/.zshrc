@@ -62,6 +62,17 @@ alias mpr="~/scripts/mpr"
 alias c="clear"
 alias pr="prime-run mpv"
 
+# zoxide jump (cd is already zoxide-powered via `zoxide init --cmd cd`)
+alias z='cd'
+# claude code, skipping the permission prompts
+alias cla='claude --dangerously-skip-permissions'
+# fuzzy-search shell history -> drop the pick onto the command line (edit before run)
+h() {
+  local cmd
+  cmd=$(fc -rl 1 | fzf --height 40% --reverse --query "$*" | sed 's/^[[:space:]]*[0-9]*[[:space:]]*//')
+  [ -n "$cmd" ] && print -z -- "$cmd"
+}
+
 mkc() {
   mkdir $1 
   cd $1 
@@ -136,3 +147,4 @@ if [ -f '/home/neil/google-cloud-sdk/path.zsh.inc' ]; then . '/home/neil/google-
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/neil/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/neil/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="$HOME/.local/bin:$PATH"
