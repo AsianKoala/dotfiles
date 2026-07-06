@@ -72,6 +72,10 @@ h() {
   cmd=$(fc -rl 1 | fzf --height 40% --reverse --query "$*" | sed 's/^[[:space:]]*[0-9]*[[:space:]]*//')
   [ -n "$cmd" ] && print -z -- "$cmd"
 }
+# view a git diff in nvim via diffview; args pass through, e.g. `gd --cached`, `gd HEAD~2`
+# (overrides oh-my-zsh's gd='git diff')
+unalias gd 2>/dev/null
+gd() { nvim -c "DiffviewOpen $*" }
 
 mkc() {
   mkdir $1 
