@@ -1,10 +1,9 @@
 #!/bin/sh
-
-# Some events send additional information specific to the event in the $INFO
-# variable. E.g. the front_app_switched event sends the name of the newly
-# focused application in the $INFO variable:
-# https://felixkratz.github.io/SketchyBar/config/events#events-and-scripting
-
+# Show the focused app's name. Uses $INFO on the switch event; otherwise (e.g.
+# on initial load / forced update) queries yabai for the focused window's app.
 if [ "$SENDER" = "front_app_switched" ]; then
   sketchybar --set "$NAME" label="$INFO"
+else
+  APP="$(yabai -m query --windows --window 2>/dev/null | jq -r '.app // empty')"
+  [ -n "$APP" ] && sketchybar --set "$NAME" label="$APP"
 fi

@@ -13,10 +13,14 @@ if [ -f "$HOME/.cache/wal/colors.sh" ]; then
   export LABEL_COLOR=$(_c ff "$foreground")
   export ACCENT_COLOR=$(_c ff "$color6")      # vivid pink
   export SPACE_BG=$(_c 55 "$color6")          # active-space highlight
+  export ITEM_BG=$(_c 33 "$color8")           # right-cluster bracket bg
+  export DIM_COLOR=$(_c ff "$color8")         # muted / inactive glyphs
 else
   export BAR_COLOR=0xe6170411
   export ICON_COLOR=0xffecd4e4
   export LABEL_COLOR=0xffecd4e4
   export ACCENT_COLOR=0xffea70b8
   export SPACE_BG=0x55ea70b8
+  export ITEM_BG=0x3376616f
+  export DIM_COLOR=0xff76616f
 fi
